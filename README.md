@@ -21,7 +21,9 @@ Todo:
 
 Usage:
 
-git clone github.com/electronicsleep/FlashCards
+Open Terminal
+
+git clone https://github.com/electronicsleep/FlashCards.git
 
 cd FlashCards
 
