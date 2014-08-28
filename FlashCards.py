@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/python
 
 # Author: Chris Robertson <electronicsleep@gmail.com>
 # Date: 08/27/2014
