@@ -3,10 +3,10 @@ FlashCards
 
 FlashCard application for learning python and memorizing simple math
 
-# Author: Chris Robertson
-# Date: 08/27/2014
-# Purpose: FlashCard application for learning python and memorizing simple math I intened to keep this as simple as possible for CIS students to learn programming. Let me know if you have any ideas.
-# Released under the MIT license
+Author: Chris Robertson
+Date: 08/27/2014
+Purpose: FlashCard application for learning python and memorizing simple math I intened to keep this as simple as possible for CIS students to learn programming. Let me know if you have any ideas.
+Released under the MIT license
 
 Name: Flash Cards Python
 
