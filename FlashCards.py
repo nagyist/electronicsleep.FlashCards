@@ -20,16 +20,16 @@ cardFront=""
 def showQuestionCard(cardFront):
  
         print "----------"
-        print "|         |"
-        print "|  %s    " % cardFront
-        print "|         |"
+        print "|////////|"
+        print "| %s    " % cardFront
+        print "|////////|"
         print "----------"
  
 def showAnswerCard(cardBack):
  
         print "----------"
         print "|         |"
-        print "|  %s    " % cardBack
+        print "| %s    " % cardBack
         print "|         |"
         print "----------"
 
@@ -59,7 +59,7 @@ print "NUMBER OF CARDS %s" % n
 
 randomNum = randint(1,n)
 
-# Loop over items and unpack each item.
+#LOOP AND UNPACK ONE RANDOM CARD
 i = 0
 for k, v in cards.items():
 
