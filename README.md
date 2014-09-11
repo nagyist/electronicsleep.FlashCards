@@ -5,7 +5,8 @@ FlashCard application for learning python and memorizing simple math
 
 Author: Chris Robertson
 
-Date: 08/27/2014
+Date Added: 08/27/2014
+Date Modified: 09/10/2014
 
 License: Released under the MIT license
 
@@ -15,8 +16,6 @@ Todo:
 * GUI interface for the cards
 * Loop in the main program with quit
 * Stats on answered questions
-* Save and load questions and answers into a text file
-* Add questions and save to a text file
 * Save stats file save and load for future use
 
 Usage:
