@@ -1,12 +1,19 @@
 #!/usr/bin/python
 
 # Author: Chris Robertson <electronicsleep@gmail.com>
-# Date: 08/27/2014
-# Purpose: Simple FlashCard app for learning python
+# Date: 09/10/2014
+# Purpose: Simple FlashCard app for learning math and python
 # Released under the MIT license
 
 # Running:
-# python FlashCards.py User
+# python FlashCards.py Hello! 
+
+### IMPORT STANDARD FUNCTIONS ###
+
+import time
+import datetime
+import sys
+import traceback
 
 from random import randint
 from sys import argv
@@ -21,7 +28,7 @@ def showQuestionCard(cardFront):
  
         print "----------"
         print "|////////|"
-        print "| %s    " % cardFront
+        print "| %s    " % cardFront.strip()
         print "|////////|"
         print "----------"
  
@@ -29,7 +36,7 @@ def showAnswerCard(cardBack):
  
         print "----------"
         print "|         |"
-        print "| %s    " % cardBack
+        print "| %s    " % cardBack.strip()
         print "|         |"
         print "----------"
 
@@ -49,6 +56,23 @@ cards['REDUCE: 2/10'] = '1/5'
 cards['REDUCE: 10/100'] = '1/10'
 cards['11 - 100'] = '89'
 cards['110 - 100'] = '-10'
+
+
+#IMPORT MORE CARDS FROM FILE
+file = open('memorize.txt', 'r')
+
+#PRINT ENTIRE FILE OF QA CARDS
+#print file.read()
+
+#PARSE FILE FOR QUESTION AND ANSWER FOR CARDS
+for line in file:
+    if line.startswith('Q'):
+        first, _, questionline = line.partition(" ")
+        #print "Question: " + line,
+    elif line.startswith('A'):
+        first, _, answerline = line.partition(" ")
+        cards[questionline] = answerline
+        #print "Answer: " + line,
 
 #DEFINE SINGLE CARD
 card = {}
@@ -73,17 +97,22 @@ showQuestionCard(cardFront)
 
 #ASK FOR ANSWER
 
+print "Date: " ,datetime.datetime.now().strftime("%m/%d/%Y %H:%M")
 print "Hi %s, %s " % (user_name, script)
 print "What is the answer? "
 answer = raw_input(prompt)
 
 #EVAULATE ANSWER
 
-if (answer == cardBack):
+answer=answer.lower()
+answerCard=cardBack.lower()
+
+if answer.strip() == answerCard.strip():
  print "*** CORRECT ***"
 else:
  print "*** INCORRECT ***"
- print "the answer is: "
- print cardBack
+ print "the answer is: |"
+ print cardBack.strip()
+ print "|"
 
 showAnswerCard(cardBack)
