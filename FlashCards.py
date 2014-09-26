@@ -18,6 +18,11 @@ import traceback
 from random import randint
 from sys import argv
 
+if len(sys.argv)==1:
+    print 'Usage: python FlashCards.py Name'
+    sys.exit(0)
+
+
 script, user_name = argv
 prompt = '> '
 cardFront=""
@@ -56,6 +61,7 @@ cards['REDUCE: 2/10'] = '1/5'
 cards['REDUCE: 10/100'] = '1/10'
 cards['11 - 100'] = '89'
 cards['110 - 100'] = '-10'
+cards['5 + 5'] = '10'
 
 
 #IMPORT MORE CARDS FROM FILE
@@ -73,6 +79,8 @@ for line in file:
         first, _, answerline = line.partition(" ")
         cards[questionline] = answerline
         #print "Answer: " + line,
+
+file.close()
 
 #DEFINE SINGLE CARD
 card = {}
@@ -116,3 +124,7 @@ else:
  print "|"
 
 showAnswerCard(cardBack)
+
+#END OF SCRIPT
+
+sys.exit(0)
