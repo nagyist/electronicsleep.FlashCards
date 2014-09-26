@@ -32,5 +32,5 @@ python FlashCards.py User
 Resources:
 https://www.python.org/
 
-Web Version
+Web Version:
 http://mathcard.us
