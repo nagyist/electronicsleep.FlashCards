@@ -23,6 +23,8 @@ if len(sys.argv)==1:
     sys.exit(0)
 
 
+timeStart = time.time()
+
 script, user_name = argv
 prompt = '> '
 cardFront=""
@@ -126,5 +128,12 @@ else:
 showAnswerCard(cardBack)
 
 #END OF SCRIPT
+
+timeEnd = time.time()
+
+#PRINT TIME IT TAKES TO ANSWER
+diff = timeEnd - timeStart
+diff_str = str(diff)
+print "You took " + diff_str + " seconds to answer"
 
 sys.exit(0)
