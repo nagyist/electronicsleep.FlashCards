@@ -106,14 +106,12 @@ for k, v in cards.items():
 showQuestionCard(cardFront)
 
 #ASK FOR ANSWER
-
 print "Date: " ,datetime.datetime.now().strftime("%m/%d/%Y %H:%M")
 print "Hi %s, %s " % (user_name, script)
 print "What is the answer? "
 answer = raw_input(prompt)
 
 #EVAULATE ANSWER
-
 answer=answer.lower()
 answerCard=cardBack.lower()
 
@@ -128,15 +126,12 @@ else:
 showAnswerCard(cardBack)
 
 #GET END TIME
-
 timeEnd = time.time()
 
 #PRINT TIME IT TAKES TO ANSWER
-
 diff = timeEnd - timeStart
 diff_str = str(diff)
 print "You took " + diff_str + " seconds to answer"
 
 #END OF SCRIPT
-
 sys.exit(0)
