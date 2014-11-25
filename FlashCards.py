@@ -127,13 +127,16 @@ else:
 
 showAnswerCard(cardBack)
 
-#END OF SCRIPT
+#GET END TIME
 
 timeEnd = time.time()
 
 #PRINT TIME IT TAKES TO ANSWER
+
 diff = timeEnd - timeStart
 diff_str = str(diff)
 print "You took " + diff_str + " seconds to answer"
+
+#END OF SCRIPT
 
 sys.exit(0)
