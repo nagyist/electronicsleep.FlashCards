@@ -27,6 +27,3 @@ Todo Ideas:
 
 Resources:
 https://www.python.org/
-
-Web Version:
-http://mathcard.us
