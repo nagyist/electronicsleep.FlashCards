@@ -1,10 +1,10 @@
 #PYTHON QUESTIONS FOR MEMORIZING
 
-Q. what is a tuple
-A. a list that cannot be edited after setting, char to define is ()
+Q. what is a tuple?
+A. a list that cannot be edited after setting, char to define is ().
 
 Q. what is a list?
-A. compound data type similar to an array
+A. compound data type similar to an array.
 
-Q. Data types for python
-A. Numbers, String, List, Tuple, Dictionary
+Q. Data types for python?
+A. Numbers, String, List, Tuple, Dictionary.
