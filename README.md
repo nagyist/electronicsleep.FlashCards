@@ -1,8 +1,6 @@
 FlashCards
 ==========
 
-FlashCard application for learning python and memorizing simple math
-
 Author: Chris Robertson
 
 License: Released under the MIT license
