@@ -7,7 +7,7 @@ Author: Chris Robertson
 
 License: Released under the MIT license
 
-Purpose: A simple flashcard application for anyone, particularly college and high school students to learn programming and math, I left the application as simple as possible so that students can extend the functionality without too much complexity. This is the open source version there is a web version as well. 
+Purpose: A simple flashcard application for anyone, particularly college and high school students to learn programming and math. I left the application as simple as possible so that students can extend the functionality without too much complexity. This is the open source version there is a web version. 
 
 http://mathcard.us
 
