@@ -13,9 +13,6 @@
 import sys
 import traceback
 
-from random import randint
-from sys import argv
-
 prompt = '> '
 
 #APPEND TO MEMORIZE FILE
