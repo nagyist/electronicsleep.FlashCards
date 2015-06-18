@@ -6,7 +6,7 @@
 # Released under the MIT license
 
 # Running:
-# python CreateMemFile.py Hello! 
+# python CreateMemFile.py
 
 ### IMPORT STANDARD FUNCTIONS ###
 
@@ -16,12 +16,6 @@ import traceback
 from random import randint
 from sys import argv
 
-if len(sys.argv)==1:
-    print 'Usage: python CreateMemFile.py Name'
-    sys.exit(0)
-
-
-script, user_name = argv
 prompt = '> '
 
 #APPEND TO MEMORIZE FILE
@@ -49,7 +43,6 @@ for x in range(2,10):
 for x in range(11,20):
   for y in range(1,25):
      times = x * y 
-     f = open('memorize2.txt', 'a')
      xx = str(x)
      yy = str(y)
      times2 = str(times)
