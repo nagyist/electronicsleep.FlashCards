@@ -30,6 +30,7 @@ Todo/Ideas:
 * Save stats file save and load for future use
 * Compete with others locally or on the net
 * Website to post top scores via an API call
+* iPhone version, Android version
 * More math game ideas
 
 Resources:
