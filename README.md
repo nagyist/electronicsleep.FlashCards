@@ -23,6 +23,8 @@ Todo/Ideas:
 * Run the CreateMemFile.py script to generate times tables
 * Modify the CreateMemFile.py to generate your own cards
 * Remember last 3 cards to prevent duplicates
+* Make cards for all different things
+* Use as a todo application or terms list
 * GUI interface for the cards using wxwidgets
 * C++ version, Perl version, Bash version
 * Loop in the main program with quit
