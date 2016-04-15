@@ -5,7 +5,7 @@ FlashCard application for learning python and memorizing simple math
 
 Author: Chris Robertson
 
-License: Released under the MIT license
+License: Released under the BSD license
 
 Purpose: A simple flashcard application for anyone, particularly college and high school students to learn programming and math and can be used to record anything. Think of it like a associtave memory array program. I got the idea for this program to keep my mind sharp for interviews and I wanted to remember facts I have to look up often with a goal of being a better programmer. I left the application as simple as possible so that students can extend the functionality without too much complexity. This is the open source version, there is a web version. 
 

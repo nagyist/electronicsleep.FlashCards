@@ -3,7 +3,7 @@
 # Author: Chris Robertson <electronicsleep@gmail.com>
 # Date: 09/10/2014
 # Purpose: Simple FlashCard app for learning math and python
-# Released under the MIT license
+# Released under the BSD license
 
 # Running:
 # python FlashCards.py Hello! 

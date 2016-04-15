@@ -3,7 +3,7 @@
 # Author: Chris Robertson <electronicsleep@gmail.com>
 # Date: 06/17/2015
 # Purpose: Generate a memorize.txt file for FlashCards.py
-# Released under the MIT license
+# Released under the BSD license
 
 # Running:
 # python CreateMemFile.py
