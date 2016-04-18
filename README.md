@@ -7,7 +7,7 @@ Author: Chris Robertson
 
 License: Released under the BSD license
 
-Purpose: A simple flashcard application for anyone to memorize programming and math. I got the idea for this program to keep my mind sharp and wanted to remember facts I have to look up often with a goal of being a better programmer. I left the application as simple as possible so that students can extend the functionality without too much complexity. This is the open source version, there is a web version. 
+Purpose: A simple flashcard application for anyone to memorize programming and math. I got the idea for this program to keep my mind sharp and wanted to remember facts I have to look up often with a goal of being a better programmer. I left the application as simple as possible so that anyone can extend the functionality without too much complexity. This is the open source version, there is a web version. 
 
 http://mathcard.us
 
