@@ -11,6 +11,8 @@ Purpose: A simple flashcard application for anyone, particularly college and hig
 
 http://mathcard.us
 
+![Alt text](screenshot.jpg?raw=true "ScreenShot")
+
 Usage:
 ```
 Open Terminal
