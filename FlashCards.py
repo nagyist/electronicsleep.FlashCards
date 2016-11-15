@@ -18,9 +18,9 @@ import traceback
 from random import randint
 from sys import argv
 
-if len(sys.argv)==1:
-    print 'Usage: python FlashCards.py Name'
-    sys.exit(0)
+#if len(sys.argv)==1:
+#    print 'Usage: python FlashCards.py Name'
+#    sys.exit(0)
 
 
 timeStart = time.time()
