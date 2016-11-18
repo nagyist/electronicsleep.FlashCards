@@ -18,14 +18,16 @@ import traceback
 from random import randint
 from sys import argv
 
-#if len(sys.argv)==1:
-#    print 'Usage: python FlashCards.py Name'
-#    sys.exit(0)
+print(len(sys.argv))
 
+if len(sys.argv)==1:
+    script = argv
+    user_name = "Emtpy"
+elif len(sys.argv)==2:
+    script, user_name = argv
 
 timeStart = time.time()
 
-script, user_name = argv
 prompt = '> '
 cardFront=""
 
