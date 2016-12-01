@@ -1,4 +1,4 @@
-#PYTHON QUESTIONS FOR MEMORIZING
+#EXAMPLE QUESTIONS FOR MEMORIZING
 
 Q. Enter your question
 A. Enter your answer
