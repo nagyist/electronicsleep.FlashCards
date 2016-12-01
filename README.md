@@ -17,9 +17,11 @@ cd FlashCards
 python FlashCards.py
 ```
 
+![Alt text](screenshot-cli.jpg?raw=true "ScreenShot CLI")
+
 http://mathcard.us
 
-![Alt text](screenshot.jpg?raw=true "ScreenShot")
+![Alt text](screenshot-web.jpg?raw=true "ScreenShot Web")
 
 Todo/Ideas:
 * Run the CreateMemFile.py script to generate times tables
