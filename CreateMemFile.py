@@ -13,13 +13,11 @@
 import sys
 import traceback
 
-prompt = '> '
-
 #APPEND TO MEMORIZE FILE
 
 f = open('memorize.txt', 'a')
 f.write("\n")
-f.write("#PYTHON QUESTIONS FOR MEMORIZING")
+f.write("#MATH QUESTIONS FOR MEMORIZING")
 f.write("\n")
 f.write("\n")
 
