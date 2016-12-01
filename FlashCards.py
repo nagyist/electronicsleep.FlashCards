@@ -6,7 +6,7 @@
 # Released under the BSD license
 
 # Running:
-# python FlashCards.py Hello! 
+# python FlashCards.py
 
 ### IMPORT STANDARD FUNCTIONS ###
 
@@ -18,7 +18,8 @@ import traceback
 from random import randint
 from sys import argv
 
-print(len(sys.argv))
+#PRINT NUMBER OF ARGUMENTS
+#print(len(sys.argv))
 
 if len(sys.argv)==1:
     script = argv
@@ -35,37 +36,47 @@ cardFront=""
 
 def showQuestionCard(cardFront):
  
-        print "----------"
-        print "|////////|"
-        print "| %s    " % cardFront.strip()
-        print "|////////|"
-        print "----------"
+        print("\---------------------------/")
+        print("|///////////////////////////|")
+        print("|///////////////////////////|")
+        print("| Q. %s                " % cardFront.strip())
+        print("|///////////////////////////|")
+        print("|///////////////////////////|")
+        print("\---------------------------/")
  
 def showAnswerCard(cardBack):
  
-        print "----------"
-        print "|         |"
-        print "| %s    " % cardBack.strip()
-        print "|         |"
-        print "----------"
+        print("\---------------------------/")
+        print("|                           |")
+        print("|                           |")
+        print("| A. %s               " % cardBack.strip())
+        print("|                           |")
+        print("|                           |")
+        print("\---------======------------/")
 
 
 ### SETUP CARD DICTIONARY ###
 
 #INITIAL SETUP
-cards = {'2+2': '4', '3+3': '6'}
+cards = {}
 
-#ADD SOME MORE CARDS
-cards['3 * 2'] = '6'
-cards['4 * 11'] = '44'
-cards['8 * 2'] = '16'
-cards['11 - 100'] = '89'
-cards['110 - 100'] = '-10'
-cards['5 + 5'] = '10'
+#HARDCODED EXAMPLE CARDS
+#cards['3 * 2'] = '6'
+#cards['4 * 11'] = '44'
+#cards['8 * 2'] = '16'
+#cards['11 - 100'] = '89'
+#cards['110 - 100'] = '-10'
+#cards['5 + 5'] = '10'
 
 
 #IMPORT MORE CARDS FROM FILE
-file = open('memorize.txt', 'r')
+
+try:
+    file = open('memorize.txt', 'r')
+except:
+    print("Please create a memorize.txt file")
+    exit()
+
 
 #PRINT ENTIRE FILE OF QA CARDS
 #print file.read()
@@ -74,11 +85,11 @@ file = open('memorize.txt', 'r')
 for line in file:
     if line.startswith('Q'):
         first, _, questionline = line.partition(" ")
-        #print "Question: " + line,
+        #print("Question: " + line,)
     elif line.startswith('A'):
         first, _, answerline = line.partition(" ")
         cards[questionline] = answerline
-        #print "Answer: " + line,
+        #print("Answer: " + line,)
 
 file.close()
 
@@ -87,7 +98,9 @@ card = {}
 
 #FIND HOW MANY CARDS
 n = len(cards.keys())
-print "NUMBER OF CARDS %s" % n
+print("\=====-----======--------=====/")
+print("NUMBER OF CARDS %s" % n)
+print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
 
 randomNum = randint(1,n)
 
@@ -104,9 +117,8 @@ for k, v in cards.items():
 showQuestionCard(cardFront)
 
 #ASK FOR ANSWER
-print "Date: " ,datetime.datetime.now().strftime("%m/%d/%Y %H:%M")
-print "Hi %s, %s " % (user_name, script)
-print "What is the answer? "
+#print("Hi %s, %s " % (user_name, script))
+print("What is the answer? ")
 answer = raw_input(prompt)
 
 #EVAULATE ANSWER
@@ -114,12 +126,13 @@ answer=answer.lower()
 answerCard=cardBack.lower()
 
 if answer.strip() == answerCard.strip():
- print "*** CORRECT ***"
+ print("*** CORRECT ***")
 else:
- print "*** INCORRECT ***"
- print "the answer is: |"
- print cardBack.strip()
- print "|"
+ print("*** INCORRECT ***")
+ print("The correct answer is:")
+ #print("the answer is: |")
+ #print(cardBack.strip())
+ #print("|")
 
 showAnswerCard(cardBack)
 
@@ -129,7 +142,8 @@ timeEnd = time.time()
 #PRINT TIME IT TAKES TO ANSWER
 diff = timeEnd - timeStart
 diff_str = str(diff)
-print "You took " + diff_str + " seconds to answer"
+print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
+print("You took " + diff_str + " seconds to answer")
 
 #END OF SCRIPT
 sys.exit(0)

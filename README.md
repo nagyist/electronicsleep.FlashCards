@@ -1,20 +1,20 @@
 FlashCards
 ==========
 
-FlashCard application for learning python and memorizing simple math
+FlashCard application for learning python and memorizing anything
 
 Author: Chris Robertson
 
 License: Released under the BSD license
 
-Purpose: A simple flashcard application for anyone to memorize programming and math. I got the idea for this program to keep my mind sharp and wanted to remember facts I have to look up often with a goal of being a better programmer. I left the application as simple as possible so that anyone can extend the functionality without too much complexity. This is the open source version, there is a web version. 
+Purpose: A simple flashcard application for anyone to memorize programming and math. I got the idea for this program to keep my mind sharp and wanted to remember facts I have to look up often with a goal of being a better programmer and human. I left the application as simple as possible so that anyone can extend the functionality without too much complexity. Copy the information you want to memoorize into the memorize.txt file and run. This is the open source version, there is a web version. 
 
 Usage:
 ```
 Open Terminal
 git clone https://github.com/electronicsleep/FlashCards.git
 cd FlashCards
-python FlashCards.py User
+python FlashCards.py
 ```
 
 http://mathcard.us
