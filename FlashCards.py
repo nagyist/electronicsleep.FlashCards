@@ -116,10 +116,17 @@ for k, v in cards.items():
 
 showQuestionCard(cardFront)
 
-#ASK FOR ANSWER
+#FUTURE USERNAME USAGE
 #print("Hi %s, %s " % (user_name, script))
+
 print("What is the answer? ")
-answer = raw_input(prompt)
+
+try: 
+    input = raw_input
+except:
+    pass
+
+answer = input(prompt)
 
 #EVAULATE ANSWER
 answer=answer.lower()
