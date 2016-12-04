@@ -1,7 +1,7 @@
 FlashCards
 ==========
 
-FlashCard application for learning python and memorizing anything
+Open Source Flash Card Application for learning Python and Memorizing anything
 
 Author: Chris Robertson
 
