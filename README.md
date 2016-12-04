@@ -9,7 +9,7 @@ License: Released under the BSD license
 
 Purpose: A simple flashcard application for anyone to memorize programming and math. I got the idea for this program to keep my mind sharp and wanted to remember facts I have to look up often with a goal of being a better programmer and human. I left the application as simple as possible so that anyone can extend the functionality without much complexity. Update the information you want to memorize into the memorize.txt file and run. This is the open source comand line version and there is a web version. 
 
-Works with Python2.7 and 3 on Debian and MacOS
+Works with Python2.7 and 3.5 on Debian and MacOS
 
 Usage:
 ```
