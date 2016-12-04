@@ -17,19 +17,19 @@ echo -e "#COMBINE MEMORIZE FILES\n" > memorize.txt
 for FILE in $FILES
 do
 
- if [ $FILE == 'memorize.txt' ];then
+ if [ "$FILE" == 'memorize.txt' ];then
   continue
  fi
 
- if [ $FILE == 'memorize_backup.txt' ];then
+ if [ "$FILE" == 'memorize_backup.txt' ];then
   continue
  fi
 
- echo $FILE
+ echo "$FILE"
 
  echo -e "\n#FILE: $FILE\n" >> memorize.txt
 
- cat $FILE >> memorize.txt
+ cat "$FILE" >> memorize.txt
 
 done
 
