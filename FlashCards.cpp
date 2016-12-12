@@ -22,7 +22,6 @@ int main ()
   string text;
   ifstream ifs("memorize.txt");
 
-
   int num = 0;
   int card = 0;
 
