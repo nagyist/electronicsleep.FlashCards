@@ -4,6 +4,7 @@
 # Date: 09/10/2014
 # Purpose: Simple FlashCard app for learning math and python
 # Released under the BSD license
+# Works with python 2 and 3
 
 # Running:
 # python FlashCards.py
