@@ -31,6 +31,7 @@ git clone https://github.com/electronicsleep/FlashCards.git
 cd FlashCards
 g++ FlashCards.cpp -o FlashCards
 ./FlashCards
+watch ./FlashCards
 for i in {1..10}; do ./FlashCards; done
 ```
 
