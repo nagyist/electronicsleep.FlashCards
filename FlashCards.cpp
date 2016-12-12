@@ -13,6 +13,8 @@ g++ FlashCards.cpp -o FlashCards
 #include <fstream>
 #include <string>
 #include <cstring>
+#include <time.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -56,6 +58,7 @@ int main ()
   //Show random card
   cout << "Random Card: " << endl;
   cout << "Question: " << questions[card] << endl;
+  usleep(3000000); 
   cout << "Answer: " << answers[card] << endl;
 
   return 0;
