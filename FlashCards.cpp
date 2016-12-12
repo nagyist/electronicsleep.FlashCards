@@ -26,13 +26,12 @@ int main ()
   int num = 0;
   int card = 0;
 
-  string answers[50];
-  string questions[50];
+  string answers[100];
+  string questions[100];
 
     while(!ifs.eof()) 
     {
       getline(ifs, text);
-
 
       //cout << "LINE: " << num << " " << text << "\n" ;
 
@@ -44,7 +43,7 @@ int main ()
         answers[num] = string(text);
         num++;
 
-        if (num >= 50) {
+        if (num >= 100) {
           break;
         }
 
@@ -56,14 +55,15 @@ int main ()
   srand(time(NULL));
   card = rand() % num; 
   
-  cout << "Random Num: " << card << endl;
+  //cout << "Random Num: " << card << endl;
   cout << "Number of Cards: " << num << endl;
 
   //Show random card
-  cout << "Random Card: " << endl;
+  cout << "=======-----Random Card-----=======" << endl;
   cout << "Question: " << questions[card] << endl;
   usleep(3000000); 
   cout << "Answer: " << answers[card] << endl;
+  cout << "-----------------------------------" << endl;
 
   return 0;
 }
