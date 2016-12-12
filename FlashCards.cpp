@@ -23,7 +23,6 @@ int main ()
   string text;
   ifstream ifs("memorize.txt");
 
-  srand (time(NULL));
 
   int num = 0;
   int card = 0;
@@ -45,6 +44,7 @@ int main ()
         //cout << "found Answer Card" << '\n';
         answers[num] = string(text);
         num++;
+
         if (num >= 50) {
           break;
         }
@@ -54,6 +54,7 @@ int main ()
     }
 
   //Get random card
+  srand(time(NULL));
   card = rand() % num; 
   
   cout << "Random Num: " << card << endl;
