@@ -14,7 +14,7 @@ possible so that anyone can extend the functionality without much complexity.
 
 Update the information you want to memorize into the memorize.txt file and run. This is the open source comand line version and there is a web version. 
 
-Works with Python2.7 and 3.5 on Debian and MacOS
+Works with Python2.7 and 3.5 MacOS and Debian
 
 Python Usage:
 ```
