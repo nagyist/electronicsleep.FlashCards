@@ -1,7 +1,7 @@
 /*
 Author: Chris Robertson <electronicsleep@gmail.com>
-Date: 09/10/2014
-Purpose: Simple FlashCard app for learning math and python
+Date: 12/11/2016
+Purpose: Simple FlashCard app for learning math and C++
 Released under the BSD license
 
 Running:
