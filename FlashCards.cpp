@@ -9,13 +9,11 @@ g++ FlashCards.cpp -o FlashCards
 ./FlashCards
 */
 
-#include <stdlib.h>
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <cstring>
-#include <time.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 using namespace std;
 
