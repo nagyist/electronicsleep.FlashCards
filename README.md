@@ -13,12 +13,21 @@ Update the information you want to memorize into the memorize.txt file and run. 
 
 Works with Python2.7 and 3.5 on Debian and MacOS
 
-Usage:
+Python Usage:
 ```
 Open Terminal
 git clone https://github.com/electronicsleep/FlashCards.git
 cd FlashCards
 python FlashCards.py
+```
+
+CPP Usage:
+```
+Open Terminal
+git clone https://github.com/electronicsleep/FlashCards.git
+cd FlashCards
+g++ FlashCards.cpp -o FlashCards
+./FlashCards
 ```
 
 Command Line Version
