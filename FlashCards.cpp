@@ -45,6 +45,10 @@ int main ()
         //cout << "found Answer Card" << '\n';
         answers[num] = string(text);
         num++;
+        if (num >= 50) {
+          break;
+        }
+
       }
 
     }
