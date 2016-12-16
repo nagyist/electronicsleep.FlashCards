@@ -29,10 +29,14 @@ C++ Usage:
 Open Terminal
 git clone https://github.com/electronicsleep/FlashCards.git
 cd FlashCards
+
+llvm-g++ FlashCards.cpp -o ./FlashCards
+or
 g++ FlashCards.cpp -o FlashCards
-./FlashCards
-watch ./FlashCards
-for i in {1..10}; do ./FlashCards; done
+
+./FlashCards #run one
+watch ./FlashCards #keep running
+for i in {1..10}; do ./FlashCards; done #run ten
 ```
 
 Command Line Version
