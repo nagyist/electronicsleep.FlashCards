@@ -12,6 +12,7 @@ g++ FlashCards.cpp -o FlashCards
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <vector>
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -25,8 +26,9 @@ int main ()
   int num = 0;
   int card = 0;
 
-  string answers[100];
-  string questions[100];
+
+  std::vector<std::string> answers;
+  std::vector<std::string> questions;
 
     while(!ifs.eof()) 
     {
@@ -36,16 +38,11 @@ int main ()
 
       if (text.find("Q.") != std::string::npos) {
         //cout << "found Question Card" << '\n';
-        questions[num] = string(text);
+        questions.push_back(string(text));
       } else if (text.find("A.") != std::string::npos) {
         //cout << "found Answer Card" << '\n';
-        answers[num] = string(text);
+        answers.push_back(string(text));
         num++;
-
-        if (num >= 100) {
-          break;
-        }
-
       }
 
     }
@@ -54,7 +51,6 @@ int main ()
   srand(time(NULL));
   card = rand() % num; 
   
-  //cout << "Random Num: " << card << endl;
   cout << "Number of Cards: " << num << endl;
 
   //Show random card
