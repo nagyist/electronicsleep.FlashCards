@@ -31,7 +31,6 @@ git clone https://github.com/electronicsleep/FlashCards.git
 cd FlashCards
 
 llvm-g++ FlashCards.cpp -o ./FlashCards
-or
 g++ FlashCards.cpp -o FlashCards
 
 ./FlashCards #run one
