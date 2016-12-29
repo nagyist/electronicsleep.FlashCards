@@ -35,13 +35,9 @@ int main ()
     {
       getline(ifs, text);
 
-      //cout << "LINE: " << num << " " << text << "\n" ;
-
       if (text.find("Q.") != std::string::npos) {
-        //cout << "found Question Card" << '\n';
         questions.push_back(string(text));
       } else if (text.find("A.") != std::string::npos) {
-        //cout << "found Answer Card" << '\n';
         answers.push_back(string(text));
         num++;
       }
