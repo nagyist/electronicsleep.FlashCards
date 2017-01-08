@@ -43,7 +43,7 @@ public class FlashCardsJava {
                 BufferedReader br = new BufferedReader(isr);
 
                 while ((line = br.readLine()) != null) {
-                    //System.out.println("line:" + line);
+                    //System.out.println("line: " + line);
 
                     if (n == number_of_cards) {
                         System.out.println("Break: End of Array");
@@ -73,6 +73,13 @@ public class FlashCardsJava {
         System.out.println("Random num:" + x);
 
         System.out.println(Questions[x]);
+
+        try {
+            Thread.sleep(3000);
+        } catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+
         System.out.println(Answers[x]);
         }
 
