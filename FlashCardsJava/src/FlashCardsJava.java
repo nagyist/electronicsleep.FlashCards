@@ -13,6 +13,7 @@
 import java.io.*;
 import java.nio.charset.Charset;
 import java.io.IOException;
+import java.util.Random;
 
 public class FlashCardsJava {
 
@@ -28,10 +29,14 @@ public class FlashCardsJava {
 
         if(file.exists()) {
 
-            String[] Questions = new String[20];
-            String[] Answers = new String[20];
+            int number_of_cards = 200;
+
+            String[] Questions = new String[number_of_cards];
+            String[] Answers = new String[number_of_cards];
 
             String line;
+            int n = 0;
+
             try {
                 InputStream fis = new FileInputStream(path);
                 InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
@@ -40,21 +45,35 @@ public class FlashCardsJava {
                 while ((line = br.readLine()) != null) {
                     //System.out.println("line:" + line);
 
-                    if (line.startsWith("Q.")) {
-                        //System.out.println("Found Question");
-                        Questions[0] = line;
-                    } else if (line.startsWith("A.")) {
-                        //System.out.println("Found Answer");
-                        Answers[0] = line;
+                    if (n == number_of_cards) {
+                        System.out.println("Break: End of Array");
+                        break;
                     }
-                }
+
+                    if (line.startsWith("Q.")) {
+                        System.out.println("Found Question: " + line);
+                        Questions[n] = line;
+                    } else if (line.startsWith("A.")) {
+                        System.out.println("Found Answer: " + line);
+                        Answers[n] = line;
+                        n++;
+                        System.out.println("n: " + n);
+                    }
+
+
+                    }
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-        System.out.println(Questions[0]);
-        System.out.println(Answers[0]);
+        Random rand = new Random();
+        int x = rand.nextInt(number_of_cards);
+
+        System.out.println("Random num:" + x);
+
+        System.out.println(Questions[x]);
+        System.out.println(Answers[x]);
         }
 
     }
