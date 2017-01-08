@@ -1,13 +1,13 @@
 /******************************************************************************
  * Author: Chris Robertson <electronicsleep@gmail.com>
  * Date: 12/18/2016
- * Purpose: Simple FlashCard app for learning math and Java
+ * Purpose: Open Source Application for learning and memorizing
  * Released under the BSD license
  *
- * Compilation:  javac MathCardsJava.java
- * Execution:    java MathCardsJava.java
+ * Compilation:  javac FlashCardsJava.java
+ * Execution:    java FlashCardsJava
  *
- *  % java FlashCardsJava.java
+ *  % java FlashCardsJava
  ******************************************************************************/
 
 import javax.swing.*;
