@@ -1,6 +1,7 @@
 # FlashCardsJava
 - Java Swing version and CLI version
 - Using IntelliJ and Javac
+- Java 8
 
 ## Files:
 - src/FlashCardsJava.java - standalone CLI version
@@ -12,4 +13,9 @@ cd src
 javac FlashCardsJava.java
 java FlashCardsJava
 ```
-## Run app.java/FlashCardsJava.java from IntelliJ
+## Run app.java or FlashCardsJava.java from IntelliJ
+
+## Todo:
+- Better interfacce for the cards
+- Show the answer first then ask the user to enter the answer
+- Score or stats after the user has asked to exit the app 
