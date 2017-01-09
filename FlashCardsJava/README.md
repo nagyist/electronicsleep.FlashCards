@@ -13,9 +13,9 @@ cd src
 javac FlashCardsJava.java
 java FlashCardsJava
 ```
-## Run app.java or FlashCardsJava.java from IntelliJ
+## OR Compile and Run app.java or FlashCardsJava.java from IntelliJ
 
 ## Todo:
-- Better interfacce for the cards
+- Better interface and graphics for the cards
 - Show the answer first then ask the user to enter the answer
 - Score or stats after the user has asked to exit the app 
