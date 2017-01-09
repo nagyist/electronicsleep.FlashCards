@@ -1,5 +1,5 @@
 # FlashCardsJava
-- Working on a Java Swing version
+- Java Swing version and CLI version
 - Using IntelliJ and Javac
 
 ## Files:
@@ -12,3 +12,4 @@ cd src
 javac FlashCardsJava.java
 java FlashCardsJava
 ```
+## Run app.java/FlashCardsJava.java from IntelliJ

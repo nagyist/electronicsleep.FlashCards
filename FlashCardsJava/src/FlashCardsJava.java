@@ -23,22 +23,21 @@ public class FlashCardsJava {
         // For CLI version
         System.out.println("Hello FlashCards");
 
-        //Card card_cli = new Card();
-        //System.out.println("card: " + card_cli);
+        FlashCardsJava card_cli = new FlashCardsJava();
+        card_cli.Card_CLI();
+    }
+
+    public void Card_CLI() {
+
+        Card card_cli = new FlashCardsJava.Card();
+        System.out.println("card: " + card_cli);
     }
 
     public class Card {
 
         public String card;
 
-
-        public String Card(String card) {
-            this.card = card;
-            return card;
-        }
-
         public String toString() {
-            //card = "Hello...";
 
             String path = "memorize.txt";
 
