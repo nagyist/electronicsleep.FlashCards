@@ -17,71 +17,100 @@ import java.util.Random;
 
 public class FlashCardsJava {
 
+
     public static void main(String[] args) throws IOException {
-        System.out.println("FlashCards");
 
-        String path = "memorize.txt";
+        // For CLI version
+        System.out.println("Hello FlashCards");
 
-        System.out.println(path);
-        File file = new File(path);
+        //Card card_cli = new Card();
+        //System.out.println("card: " + card_cli);
+    }
 
-        System.out.println(file.exists());
+    public class Card {
 
-        if(file.exists()) {
+        public String card;
+
+
+        public String Card(String card) {
+            this.card = card;
+            return card;
+        }
+
+        public String toString() {
+            //card = "Hello...";
+
+            String path = "memorize.txt";
+
+            System.out.println(path);
+            File file = new File(path);
+
+            System.out.println(file.exists());
 
             int number_of_cards = 200;
 
             String[] Questions = new String[number_of_cards];
             String[] Answers = new String[number_of_cards];
 
-            String line;
-            int n = 0;
+            Random rand = new Random();
+            int x = rand.nextInt(number_of_cards);
 
-            try {
-                InputStream fis = new FileInputStream(path);
-                InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
-                BufferedReader br = new BufferedReader(isr);
+            if(file.exists()) {
 
-                while ((line = br.readLine()) != null) {
-                    //System.out.println("line: " + line);
+                String line;
+                int n = 0;
 
-                    if (n == number_of_cards) {
-                        System.out.println("Break: End of Array");
-                        break;
+                try {
+                    InputStream fis = new FileInputStream(path);
+                    InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+                    BufferedReader br = new BufferedReader(isr);
+
+                    while ((line = br.readLine()) != null) {
+                        //System.out.println("line: " + line);
+
+                        if (n == number_of_cards) {
+                            System.out.println("Break: End of Array");
+                            break;
+                        }
+
+                        if (line.startsWith("Q.")) {
+                            System.out.println("Found Question: " + line);
+                            Questions[n] = line;
+                        } else if (line.startsWith("A.")) {
+                            System.out.println("Found Answer: " + line);
+                            Answers[n] = line;
+                            n++;
+                            System.out.println("n: " + n);
+                        }
+
                     }
 
-                    if (line.startsWith("Q.")) {
-                        System.out.println("Found Question: " + line);
-                        Questions[n] = line;
-                    } else if (line.startsWith("A.")) {
-                        System.out.println("Found Answer: " + line);
-                        Answers[n] = line;
-                        n++;
-                        System.out.println("n: " + n);
-                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
+                System.out.println("Random num:" + x);
 
-                    }
+                System.out.println(Questions[x]);
 
-            } catch (IOException e) {
-                e.printStackTrace();
+                //try {
+                //    Thread.sleep(3000);
+                //} catch(InterruptedException ex) {
+                //    Thread.currentThread().interrupt();
+                //}
+
+                System.out.println(Answers[x]);
+
+            } else {
+                System.out.println("Can not find memorize.txt file!");
             }
+            card = "\n" + Questions[x] + "\n" + Answers[x];
 
-        Random rand = new Random();
-        int x = rand.nextInt(number_of_cards);
-
-        System.out.println("Random num:" + x);
-
-        System.out.println(Questions[x]);
-
-        try {
-            Thread.sleep(3000);
-        } catch(InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
-
-        System.out.println(Answers[x]);
+            return card;
         }
 
     }
+
+
+
 }

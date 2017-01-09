@@ -14,15 +14,18 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class app {
+public class app extends FlashCardsJava {
     private JPanel panel1;
     private JButton button1;
 
     public app() {
         button1.addActionListener(new ActionListener() {
+
+            Card card = new FlashCardsJava.Card();
+
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "FlashCards.");
+                JOptionPane.showMessageDialog(null, "FlashCards: " + card);
             }
         });
     }
