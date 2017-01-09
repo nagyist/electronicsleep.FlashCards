@@ -7,5 +7,8 @@ Files:
 - src/FlashCardsJava.java - standalone cli version
 - src/app.java - Swing GUI version that uses Card class in FlashCardsJava.java
 
-- Compilation:  javac FlashCardsJava.java
-- Execution:    java FlashCardsJava
+```
+cd src
+javac FlashCardsJava.java
+java FlashCardsJava
+```
