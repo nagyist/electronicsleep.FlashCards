@@ -34,8 +34,8 @@ llvm-g++ FlashCards.cpp -o ./FlashCards
 g++ FlashCards.cpp -o FlashCards
 
 ./FlashCards #run one
-watch ./FlashCards #keep running
-for i in {1..10}; do ./FlashCards; done #run ten
+for i in {1..10}; do ./FlashCards; done #run drill one hundread
+watch ./FlashCards #keep running - if you prefer watch
 ```
 
 Command Line Version
