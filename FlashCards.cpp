@@ -38,9 +38,7 @@ int main ()
   cout << mem_file + " file does not exist: " << endl;
   return 1;
   } else {
-  cout << "Using Memory File:" + mem_file;
-
-  
+  cout << "Using Memory File: " + mem_file << endl;
 
   string text;
   ifstream ifs(mem_file);
