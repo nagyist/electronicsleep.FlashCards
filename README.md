@@ -34,7 +34,7 @@ llvm-g++ FlashCards.cpp -o ./FlashCards
 g++ FlashCards.cpp -o FlashCards
 
 ./FlashCards #run one
-for i in {1..100}; do ./FlashCards; done #run drill one hundread
+for i in {1..100}; do ./FlashCards; done #run drill one hundred
 watch ./FlashCards #keep running - if you prefer watch
 ```
 
