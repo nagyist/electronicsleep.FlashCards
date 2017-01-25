@@ -19,10 +19,31 @@ g++ FlashCards.cpp -o FlashCards
 
 using namespace std;
 
+
+bool does_file_exist(string fileName)
+{
+    std::ifstream infile(fileName);
+    return infile.good();
+}
+
 int main () 
 {
+
+  string mem_file = "memorize.txt";
+ 
+    
+
+  if (!does_file_exist(mem_file))
+  {
+  cout << mem_file + " file does not exist: " << endl;
+  return 1;
+  } else {
+  cout << "Using Memory File:" + mem_file;
+
+  
+
   string text;
-  ifstream ifs("memorize.txt");
+  ifstream ifs(mem_file);
 
   int num = 0;
   int card = 0;
@@ -58,4 +79,7 @@ int main ()
   cout << "-----------------------------------" << endl;
 
   return 0;
+  }
 }
+
+
