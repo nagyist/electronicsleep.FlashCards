@@ -19,7 +19,6 @@ g++ FlashCards.cpp -o FlashCards
 
 using namespace std;
 
-
 bool does_file_exist(string fileName)
 {
     std::ifstream infile(fileName);
@@ -30,8 +29,6 @@ int main ()
 {
 
   string mem_file = "memorize.txt";
- 
-    
 
   if (!does_file_exist(mem_file))
   {
@@ -45,7 +42,6 @@ int main ()
 
   int num = 0;
   int card = 0;
-
 
   std::vector<std::string> answers;
   std::vector<std::string> questions;
