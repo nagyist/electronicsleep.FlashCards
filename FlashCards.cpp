@@ -5,6 +5,7 @@ Purpose: Simple FlashCard app for learning math and C++
 Released under the BSD license
 
 Running:
+cppcheck FlashCards.cpp
 llvm-g++ FlashCards.cpp -o ./FlashCards
 g++ FlashCards.cpp -o FlashCards
 ./FlashCards
