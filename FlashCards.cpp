@@ -33,7 +33,7 @@ int main ()
 
   if (!does_file_exist(mem_file))
   {
-  cout << mem_file + " file does not exist: " << endl;
+  cout << mem_file + " file does not exist" << endl;
   return 1;
   } else {
   cout << "Using Memory File: " + mem_file << endl;
@@ -59,6 +59,12 @@ int main ()
       }
 
     }
+
+    if (num == 0)
+    {
+      cout << "No cards in " + mem_file + " file" << endl;
+      return 0;
+    } 
 
   //Get random card
   srand(time(NULL));
