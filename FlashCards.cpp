@@ -26,7 +26,8 @@ bool does_file_exist(string fileName)
     return infile.good();
 }
 
-int main () 
+
+int main(int argc, const char * argv[])
 {
 
   string mem_file = "memorize.txt";
@@ -82,5 +83,3 @@ int main ()
   return 0;
   }
 }
-
-
