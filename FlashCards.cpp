@@ -77,36 +77,35 @@ int main(int argc, char** argv)
 
   for (x = 0; x < 100; x++) {
 
-  //Get random card
-  srand(time(NULL));
-  card = rand() % num; 
+    //Get random card
+    srand(time(NULL));
+    card = rand() % num; 
  
+    //Show random card
+    cout << "/=======-----===========-----=======/" << endl;
+    cout << "/=======-----Random Card-----=======/" << endl;
+    cout << "Question: " << questions[card] << endl;
+    //usleep(3000000); 
 
-  //Show random card
-  cout << "/=======-----===========-----=======/" << endl;
-  cout << "/=======-----Random Card-----=======/" << endl;
-  cout << "Question: " << questions[card] << endl;
-  //usleep(3000000); 
+    cout << "Enter Answer: "; 
 
-  cout << "Enter Answer: "; 
+    cin >> answer;
 
-  cin >> answer;
+    //cout << answers[card] << endl;
+    //cout << answer << endl;
 
-  //cout << answers[card] << endl;
-  //cout << answer << endl;
+    if (answers[card] == ("A. " + answer)) {
+      cout << "Correct" << endl;
+      num_correct++;
+    } else {
+      cout << "Incorrect" << endl;
+      num_incorrect++;
+    }
 
-  if (answers[card] == ("A. " + answer)) {
-  cout << "Correct" << endl;
-  num_correct++;
-  } else {
-  cout << "Incorrect" << endl;
-  num_incorrect++;
-  }
-
-  cout << "Answer: " << answers[card] << endl;
-  cout << "-----------------------------------=/" << endl;
-  cout << " -----------===========-----------=//" << endl;
-  printf ("Num correct: %d Num incorrect: %d\n\n", num_correct, num_incorrect);
+    cout << "Answer: " << answers[card] << endl;
+    cout << "-----------------------------------=/" << endl;
+    cout << " -----------===========-----------=//" << endl;
+    printf ("Num correct: %d Num incorrect: %d\n\n", num_correct, num_incorrect);
   }
 
   return 0;
