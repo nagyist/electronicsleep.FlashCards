@@ -106,7 +106,6 @@ int main(int argc, char** argv)
   cout << "Answer: " << answers[card] << endl;
   cout << "-----------------------------------=/" << endl;
   cout << " -----------===========-----------=//" << endl;
-  //cout << "Num correct " + num_correct + "Num incorrect " + num_incorrect << endl;
   printf ("Num correct: %d Num incorrect: %d\n\n", num_correct, num_incorrect);
   }
 
