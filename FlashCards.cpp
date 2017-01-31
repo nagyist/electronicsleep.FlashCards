@@ -68,11 +68,19 @@ int main(int argc, char** argv)
       return 0;
     } 
 
+ 
+  cout << "Number of Cards: " << num << endl;
+
+  int x = 0;
+  int num_correct = 0;
+  int num_incorrect = 0;
+
+  for (x = 0; x < 100; x++) {
+
   //Get random card
   srand(time(NULL));
   card = rand() % num; 
-  
-  cout << "Number of Cards: " << num << endl;
+ 
 
   //Show random card
   cout << "/=======-----===========-----=======/" << endl;
@@ -89,13 +97,18 @@ int main(int argc, char** argv)
 
   if (answers[card] == ("A. " + answer)) {
   cout << "Correct" << endl;
+  num_correct++;
   } else {
   cout << "Incorrect" << endl;
+  num_incorrect++;
   }
 
   cout << "Answer: " << answers[card] << endl;
   cout << "-----------------------------------=/" << endl;
   cout << " -----------===========-----------=//" << endl;
+  //cout << "Num correct " + num_correct + "Num incorrect " + num_incorrect << endl;
+  printf ("Num correct: %d Num incorrect: %d\n\n", num_correct, num_incorrect);
+  }
 
   return 0;
   }
