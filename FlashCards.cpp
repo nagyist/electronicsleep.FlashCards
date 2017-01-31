@@ -22,8 +22,8 @@ using namespace std;
 
 bool does_file_exist(string fileName)
 {
-    std::ifstream infile(fileName);
-    return infile.good();
+  std::ifstream infile(fileName);
+  return infile.good();
 }
 
 
@@ -36,18 +36,18 @@ int main(int argc, char** argv)
 
   if (!does_file_exist(mem_file))
   {
-  cout << mem_file + " file does not exist" << endl;
-  return 1;
+    cout << mem_file + " file does not exist" << endl;
+    return 1;
   } else {
-  cout << "Using Memory File: " + mem_file << endl;
+    cout << "Using Memory File: " + mem_file << endl;
 
-  ifstream ifs(mem_file);
+    ifstream ifs(mem_file);
 
-  int num = 0;
-  int card = 0;
+    int num = 0;
+    int card = 0;
 
-  std::vector<std::string> answers;
-  std::vector<std::string> questions;
+    std::vector<std::string> answers;
+    std::vector<std::string> questions;
 
     while(!ifs.eof()) 
     {
@@ -69,45 +69,45 @@ int main(int argc, char** argv)
     } 
 
  
-  cout << "Number of Cards: " << num << endl;
+    cout << "Number of Cards: " << num << endl;
 
-  int x = 0;
-  int num_correct = 0;
-  int num_incorrect = 0;
+    int x = 0;
+    int num_correct = 0;
+    int num_incorrect = 0;
 
-  for (x = 0; x < 100; x++) {
-
-    //Get random card
-    srand(time(NULL));
-    card = rand() % num; 
+    for (x = 0; x < 100; x++)
+    {
+      //Get random card
+      srand(time(NULL));
+      card = rand() % num; 
  
-    //Show random card
-    cout << "/=======-----===========-----=======/" << endl;
-    cout << "/=======-----Random Card-----=======/" << endl;
-    cout << "Question: " << questions[card] << endl;
-    //usleep(3000000); 
+      //Show random card
+      cout << "/=======-----===========-----=======/" << endl;
+      cout << "/=======-----Random Card-----=======/" << endl;
+      cout << "Question: " << questions[card] << endl;
+      //usleep(3000000); 
 
-    cout << "Enter Answer: "; 
+      cout << "Enter Answer: "; 
+      cin >> answer;
 
-    cin >> answer;
+      //cout << answers[card] << endl;
+      //cout << answer << endl;
 
-    //cout << answers[card] << endl;
-    //cout << answer << endl;
+      if (answers[card] == ("A. " + answer)) 
+      {
+        cout << "Correct" << endl;
+        num_correct++;
+      } else {
+        cout << "Incorrect" << endl;
+        num_incorrect++;
+      }
 
-    if (answers[card] == ("A. " + answer)) {
-      cout << "Correct" << endl;
-      num_correct++;
-    } else {
-      cout << "Incorrect" << endl;
-      num_incorrect++;
+      cout << "Answer: " << answers[card] << endl;
+      cout << "-----------------------------------=/" << endl;
+      cout << " -----------===========-----------=//" << endl;
+      printf ("Num correct: %d Num incorrect: %d\n\n", num_correct, num_incorrect);
     }
 
-    cout << "Answer: " << answers[card] << endl;
-    cout << "-----------------------------------=/" << endl;
-    cout << " -----------===========-----------=//" << endl;
-    printf ("Num correct: %d Num incorrect: %d\n\n", num_correct, num_incorrect);
   }
-
   return 0;
-  }
 }
