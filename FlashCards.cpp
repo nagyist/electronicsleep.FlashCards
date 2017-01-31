@@ -31,6 +31,8 @@ int main(int argc, char** argv)
 {
 
   string mem_file = "memorize.txt";
+  string answer = "";
+  string text = "";
 
   if (!does_file_exist(mem_file))
   {
@@ -39,7 +41,6 @@ int main(int argc, char** argv)
   } else {
   cout << "Using Memory File: " + mem_file << endl;
 
-  string text;
   ifstream ifs(mem_file);
 
   int num = 0;
@@ -81,7 +82,6 @@ int main(int argc, char** argv)
 
   cout << "Enter Answer: "; 
 
-  string answer;
   cin >> answer;
 
   //cout << answers[card] << endl;
