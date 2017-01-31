@@ -27,7 +27,7 @@ bool does_file_exist(string fileName)
 }
 
 
-int main(int argc, const char * argv[])
+int main(int argc, char** argv)
 {
 
   string mem_file = "memorize.txt";
@@ -74,11 +74,28 @@ int main(int argc, const char * argv[])
   cout << "Number of Cards: " << num << endl;
 
   //Show random card
-  cout << "=======-----Random Card-----=======" << endl;
+  cout << "/=======-----===========-----=======/" << endl;
+  cout << "/=======-----Random Card-----=======/" << endl;
   cout << "Question: " << questions[card] << endl;
-  usleep(3000000); 
+  //usleep(3000000); 
+
+  cout << "Enter Answer: "; 
+
+  string answer;
+  cin >> answer;
+
+  //cout << answers[card] << endl;
+  //cout << answer << endl;
+
+  if (answers[card] == ("A. " + answer)) {
+  cout << "Correct" << endl;
+  } else {
+  cout << "Incorrect" << endl;
+  }
+
   cout << "Answer: " << answers[card] << endl;
-  cout << "-----------------------------------" << endl;
+  cout << "-----------------------------------=/" << endl;
+  cout << " -----------===========-----------=//" << endl;
 
   return 0;
   }
