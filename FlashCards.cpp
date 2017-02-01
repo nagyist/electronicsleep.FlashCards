@@ -30,9 +30,13 @@ bool does_file_exist(string fileName)
 int main(int argc, char** argv)
 {
 
+  //Number of FlashCards to run
+  int total_drill_num = 100;
+
   string mem_file = "memorize.txt";
   string answer = "";
   string text = "";
+
 
   if (!does_file_exist(mem_file))
   {
@@ -68,14 +72,14 @@ int main(int argc, char** argv)
       return 0;
     } 
 
- 
     cout << "Number of Cards: " << num << endl;
 
-    int x = 0;
+ 
+    int drill_num = 0;
     int num_correct = 0;
     int num_incorrect = 0;
 
-    for (x = 0; x < 100; x++)
+    for (drill_num = 0; drill_num < total_drill_num; drill_num++)
     {
       //Get random card
       srand(time(NULL));
