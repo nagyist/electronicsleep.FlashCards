@@ -31,12 +31,11 @@ int main(int argc, char** argv)
 {
 
   //Number of FlashCards to run
-  int total_drill_num = 100;
+  int total_drill_num = 4;
 
   string mem_file = "memorize.txt";
   string answer = "";
   string text = "";
-
 
   if (!does_file_exist(mem_file))
   {
@@ -69,7 +68,7 @@ int main(int argc, char** argv)
     if (num == 0)
     {
       cout << "No cards in " + mem_file + " file" << endl;
-      return 0;
+      return 1;
     } 
 
     cout << "Number of Cards: " << num << endl;
