@@ -108,7 +108,9 @@ int main(int argc, char** argv)
       cout << "Answer: " << answers[card] << endl;
       cout << "-----------------------------------=/" << endl;
       cout << " -----------===========-----------=//" << endl;
-      printf ("Num correct: %d Num incorrect: %d\n\n", num_correct, num_incorrect);
+      printf("Correct: %d Incorrect: %d Card: %d\n\n", num_correct, num_incorrect, drill_num + 1);
+      float ans = ((float)num_correct/ ((float)drill_num + 1) * 100);
+      printf("%f Correct\n", ans);
     }
 
   }
