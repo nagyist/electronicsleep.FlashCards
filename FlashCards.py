@@ -37,25 +37,23 @@ cardFront = ""
 
 
 def showQuestionCard(cardFront):
- 
-        print("\---------------------------/")
-        print("|///////////////////////////|")
-        print("|///////////////////////////|")
-        print("| Q. %s                " % cardFront.strip())
-        print("|///////////////////////////|")
-        print("|///////////////////////////|")
-        print("\---------------------------/")
+    print("\---------------------------/")
+    print("|///////////////////////////|")
+    print("|///////////////////////////|")
+    print("| Q. %s                " % cardFront.strip())
+    print("|///////////////////////////|")
+    print("|///////////////////////////|")
+    print("\---------------------------/")
 
 
 def showAnswerCard(cardBack):
- 
-        print("\---------------------------/")
-        print("|                           |")
-        print("|                           |")
-        print("| A. %s               " % cardBack.strip())
-        print("|                           |")
-        print("|                           |")
-        print("\---------======------------/")
+    print("\---------------------------/")
+    print("|                           |")
+    print("|                           |")
+    print("| A. %s               " % cardBack.strip())
+    print("|                           |")
+    print("|                           |")
+    print("\---------======------------/")
 
 
 # SETUP CARD DICTIONARY
@@ -142,9 +140,9 @@ if answer.strip() == answerCard.strip():
 else:
      print("*** INCORRECT ***")
      print("The correct answer is:")
-     # print("the answer is: |")
-     # print(cardBack.strip())
-     # print("|")
+     print("the answer is: |")
+     print(cardBack.strip())
+     print("|")
 
 showAnswerCard(cardBack)
 
