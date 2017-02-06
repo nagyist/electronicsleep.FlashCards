@@ -9,31 +9,32 @@
 # Running:
 # python FlashCards.py
 
-### IMPORT STANDARD FUNCTIONS ###
+# IMPORT STANDARD FUNCTIONS ###
 
 import time
 import datetime
 import sys
-import traceback
+# import traceback
 
 from random import randint
 from sys import argv
 
-#PRINT NUMBER OF ARGUMENTS
-#print(len(sys.argv))
+# PRINT NUMBER OF ARGUMENTS
+# print(len(sys.argv))
 
-if len(sys.argv)==1:
+if len(sys.argv) == 1:
     script = argv
     user_name = "Emtpy"
-elif len(sys.argv)==2:
+elif len(sys.argv) == 2:
     script, user_name = argv
 
 timeStart = time.time()
 
 prompt = '> '
-cardFront=""
+cardFront = ""
 
-### CARD FUNCTIONS ###
+# CARD FUNCTIONS
+
 
 def showQuestionCard(cardFront):
  
@@ -44,7 +45,8 @@ def showQuestionCard(cardFront):
         print("|///////////////////////////|")
         print("|///////////////////////////|")
         print("\---------------------------/")
- 
+
+
 def showAnswerCard(cardBack):
  
         print("\---------------------------/")
@@ -56,21 +58,21 @@ def showAnswerCard(cardBack):
         print("\---------======------------/")
 
 
-### SETUP CARD DICTIONARY ###
+# SETUP CARD DICTIONARY
 
-#INITIAL SETUP
+# INITIAL SETUP
 cards = {}
 
-#HARDCODED EXAMPLE CARDS
-#cards['3 * 2'] = '6'
-#cards['4 * 11'] = '44'
-#cards['8 * 2'] = '16'
-#cards['11 - 100'] = '89'
-#cards['110 - 100'] = '-10'
-#cards['5 + 5'] = '10'
+# HARDCODED EXAMPLE CARDS
+# cards['3 * 2'] = '6'
+# cards['4 * 11'] = '44'
+# cards['8 * 2'] = '16'
+# cards['11 - 100'] = '89'
+# cards['110 - 100'] = '-10'
+# cards['5 + 5'] = '10'
 
 
-#IMPORT MORE CARDS FROM FILE
+# IMPORT MORE CARDS FROM FILE
 
 try:
     file = open('memorize.txt', 'r')
@@ -79,10 +81,11 @@ except:
     exit()
 
 
-#PRINT ENTIRE FILE OF QA CARDS
-#print file.read()
+# PRINT ENTIRE FILE OF QA CARDS
+# print file.read()
 
-#PARSE FILE FOR QUESTION AND ANSWER FOR CARDS
+# PARSE FILE FOR QUESTION AND ANSWER FOR CARDS
+
 for line in file:
     if line.startswith('Q'):
         first, _, questionline = line.partition(" ")
@@ -94,10 +97,11 @@ for line in file:
 
 file.close()
 
-#DEFINE SINGLE CARD
+# DEFINE SINGLE CARD
 card = {}
 
-#FIND HOW MANY CARDS
+# FIND HOW MANY CARDS
+
 n = len(cards.keys())
 print("\=====-----======--------=====/")
 print("NUMBER OF CARDS %s" % n)
@@ -105,7 +109,7 @@ print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
 
 randomNum = randint(1,n)
 
-#LOOP AND UNPACK ONE RANDOM CARD
+# LOOP AND UNPACK ONE RANDOM CARD
 i = 0
 for k, v in cards.items():
 
@@ -117,8 +121,8 @@ for k, v in cards.items():
 
 showQuestionCard(cardFront)
 
-#FUTURE USERNAME USAGE
-#print("Hi %s, %s " % (user_name, script))
+# FUTURE USERNAME USAGE
+# print("Hi %s, %s " % (user_name, script))
 
 print("What is the answer? ")
 
@@ -129,29 +133,29 @@ except:
 
 answer = input(prompt)
 
-#EVAULATE ANSWER
-answer=answer.lower()
-answerCard=cardBack.lower()
+# EVAULATE ANSWER
+answer = answer.lower()
+answerCard = cardBack.lower()
 
 if answer.strip() == answerCard.strip():
- print("*** CORRECT ***")
+    print("*** CORRECT ***")
 else:
- print("*** INCORRECT ***")
- print("The correct answer is:")
- #print("the answer is: |")
- #print(cardBack.strip())
- #print("|")
+     print("*** INCORRECT ***")
+     print("The correct answer is:")
+     # print("the answer is: |")
+     # print(cardBack.strip())
+     # print("|")
 
 showAnswerCard(cardBack)
 
-#GET END TIME
+# GET END TIME
 timeEnd = time.time()
 
-#PRINT TIME IT TAKES TO ANSWER
+# PRINT TIME IT TAKES TO ANSWER
 diff = timeEnd - timeStart
 diff_str = str(diff)
 print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
 print("You took " + diff_str + " seconds to answer")
 
-#END OF SCRIPT
+# END OF SCRIPT
 sys.exit(0)
