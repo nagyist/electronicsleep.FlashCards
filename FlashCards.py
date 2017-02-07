@@ -19,6 +19,7 @@ import sys
 from random import randint
 from sys import argv
 
+
 def main():
 
     # PRINT NUMBER OF ARGUMENTS
@@ -33,15 +34,15 @@ def main():
     time_start = time.time()
 
     prompt = '> '
-    cardFront = ""
+    card_front = ""
 
     # CARD FUNCTIONS
 
-    def show_question_card(cardFront):
+    def show_question_card(card_front):
         print("\---------------------------/")
         print("|///////////////////////////|")
         print("|///////////////////////////|")
-        print("| Q. %s                " % cardFront.strip())
+        print("| Q. %s                " % card_front.strip())
         print("|///////////////////////////|")
         print("|///////////////////////////|")
         print("\---------------------------/")
@@ -54,7 +55,6 @@ def main():
         print("|                           |")
         print("|                           |")
         print("\---------======------------/")
-
 
     # SETUP CARD DICTIONARY
 
@@ -69,7 +69,6 @@ def main():
     # cards['110 - 100'] = '-10'
     # cards['5 + 5'] = '10'
 
-
     # IMPORT MORE CARDS FROM FILE
 
     try:
@@ -78,7 +77,6 @@ def main():
         print("Please create a memorize.txt file")
         exit()
 
-
     # PRINT ENTIRE FILE OF QA CARDS
     # print mem_file.read()
 
@@ -86,11 +84,11 @@ def main():
 
     for line in mem_file:
         if line.startswith('Q'):
-            first, _, questionline = line.partition(" ")
+            first, _, question_line = line.partition(" ")
             # print("LOAD: Question: " + line,)
         elif line.startswith('A'):
-            first, _, answerline = line.partition(" ")
-            cards[questionline] = answerline
+            first, _, answer_line = line.partition(" ")
+            cards[question_line] = answer_line
             # print("LOAD: Answer: " + line,)
 
     mem_file.close()
@@ -165,7 +163,6 @@ def main():
         if percent_correct > 75:
             print ("Good Job!")
         print str(percent_correct) + "% Correct"
-
 
 if __name__ == "__main__":
     main()
