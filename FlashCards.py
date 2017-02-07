@@ -105,7 +105,6 @@ def main():
     print("NUMBER OF CARDS %s" % n)
     print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
 
-
     num_cards = 4
 
     num_correct = 0
@@ -155,10 +154,10 @@ def main():
         show_answer_card(card_back)
 
         # GET END TIME
-        timeEnd = time.time()
+        time_end = time.time()
 
         # PRINT TIME IT TAKES TO ANSWER
-        diff = timeEnd - time_start
+        diff = time_end - time_start
         diff_str = str(diff)
         print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
         print("You took " + diff_str + " seconds to answer")
@@ -166,10 +165,6 @@ def main():
         if percent_correct > 75:
             print ("Good Job!")
         print str(percent_correct) + "% Correct"
-
-
-    # END OF SCRIPT
-    sys.exit(0)
 
 
 if __name__ == "__main__":
