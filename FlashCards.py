@@ -105,55 +105,67 @@ print("\=====-----======--------=====/")
 print("NUMBER OF CARDS %s" % n)
 print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
 
-randomNum = randint(1,n)
 
-# LOOP AND UNPACK ONE RANDOM CARD
-i = 0
-for k, v in cards.items():
+num_cards = 4
 
-    i += 1
-    if (i == randomNum):
-        cardFront = k
-        cardBack = v
+num_correct = 0
+num_incorrect = 0
+
+for i in range(num_cards):
+
+    randomNum = randint(1,n)
+
+    # LOOP AND UNPACK ONE RANDOM CARD
+    i = 0
+    for k, v in cards.items():
+
+        i += 1
+        if (i == randomNum):
+            cardFront = k
+            cardBack = v
 
 
-showQuestionCard(cardFront)
+    showQuestionCard(cardFront)
 
-# FUTURE USERNAME USAGE
-# print("Hi %s, %s " % (user_name, script))
+    print("What is the answer? ")
 
-print("What is the answer? ")
+    try:
+        input = raw_input
+    except:
+        pass
 
-try: 
-    input = raw_input
-except:
-    pass
+    answer = input(prompt)
 
-answer = input(prompt)
+    # EVAULATE ANSWER
+    answer = answer.lower()
+    answerCard = cardBack.lower()
 
-# EVAULATE ANSWER
-answer = answer.lower()
-answerCard = cardBack.lower()
+    if answer.strip() == answerCard.strip():
+         print("*** CORRECT ***")
+         num_correct += 1
+         print "Num Correct: " + str(num_correct)
+    else:
+         print("*** INCORRECT ***")
+         print("The correct answer is:")
+         print("the answer is: |")
+         print(cardBack.strip())
+         print("|")
+         num_incorrect += 1
+         print "Num Incorrect: " + str(num_incorrect)
 
-if answer.strip() == answerCard.strip():
-    print("*** CORRECT ***")
-else:
-     print("*** INCORRECT ***")
-     print("The correct answer is:")
-     print("the answer is: |")
-     print(cardBack.strip())
-     print("|")
+    showAnswerCard(cardBack)
 
-showAnswerCard(cardBack)
+    # GET END TIME
+    timeEnd = time.time()
 
-# GET END TIME
-timeEnd = time.time()
+    # PRINT TIME IT TAKES TO ANSWER
+    diff = timeEnd - timeStart
+    diff_str = str(diff)
+    print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
+    print("You took " + diff_str + " seconds to answer")
+    percent_correct = ((float(num_correct) / float(num_cards)) * 100)
+    print str(percent_correct) + "% Correct"
 
-# PRINT TIME IT TAKES TO ANSWER
-diff = timeEnd - timeStart
-diff_str = str(diff)
-print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
-print("You took " + diff_str + " seconds to answer")
 
 # END OF SCRIPT
 sys.exit(0)
