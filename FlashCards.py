@@ -20,6 +20,26 @@ from random import randint
 from sys import argv
 
 
+def show_question_card(card_front):
+    print("\---------------------------/")
+    print("|///////////////////////////|")
+    print("|///////////////////////////|")
+    print("| Q. %s                " % card_front.strip())
+    print("|///////////////////////////|")
+    print("|///////////////////////////|")
+    print("\---------------------------/")
+
+
+def show_answer_card(cardBack):
+    print("\---------------------------/")
+    print("|                           |")
+    print("|                           |")
+    print("| A. %s               " % cardBack.strip())
+    print("|                           |")
+    print("|                           |")
+    print("\---------======------------/")
+
+
 def main():
 
     # PRINT NUMBER OF ARGUMENTS
@@ -35,26 +55,6 @@ def main():
 
     prompt = '> '
     card_front = ""
-
-    # CARD FUNCTIONS
-
-    def show_question_card(card_front):
-        print("\---------------------------/")
-        print("|///////////////////////////|")
-        print("|///////////////////////////|")
-        print("| Q. %s                " % card_front.strip())
-        print("|///////////////////////////|")
-        print("|///////////////////////////|")
-        print("\---------------------------/")
-
-    def show_answer_card(cardBack):
-        print("\---------------------------/")
-        print("|                           |")
-        print("|                           |")
-        print("| A. %s               " % cardBack.strip())
-        print("|                           |")
-        print("|                           |")
-        print("\---------======------------/")
 
     # SETUP CARD DICTIONARY
 
