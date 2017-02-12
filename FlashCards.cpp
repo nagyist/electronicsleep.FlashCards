@@ -6,7 +6,9 @@ Released under the BSD license
 
 Running:
 cppcheck FlashCards.cpp
+#MacOS
 llvm-g++ FlashCards.cpp -o ./FlashCards
+#Linux
 g++ FlashCards.cpp -o FlashCards
 ./FlashCards
 */

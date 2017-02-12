@@ -30,12 +30,13 @@ Open Terminal
 git clone https://github.com/electronicsleep/FlashCards.git
 cd FlashCards
 
+#MacOS
 llvm-g++ FlashCards.cpp -o ./FlashCards
+#Linux
 g++ FlashCards.cpp -o FlashCards
 
 ./FlashCards #run one
 for i in {1..100}; do ./FlashCards; done #run drill one hundred
-watch ./FlashCards #keep running - if you prefer watch
 ```
 
 Command Line Version
