@@ -15,6 +15,8 @@ possible so that anyone can extend the functionality without much complexity.
 Update the information you want to memorize into the memorize.txt file and run. This is the open source comand line version and there is a web version. 
 
 Works with Python2.7 and 3.5 MacOS and Debian
+Java version tested and works with IntelliJ
+C++ version tested and works MacOS
 
 Python Usage:
 ```
@@ -48,6 +50,11 @@ Web Version
 http://mathcard.us
 
 ![Alt text](screenshot-web.jpg?raw=true "ScreenShot Web")
+
+Java Version
+
+![Alt text](screenshot-javajpg?raw=true "ScreenShot Java")
+
 
 Todo/Ideas:
 * Run the CreateMemFile.py script to generate times tables
