@@ -41,7 +41,7 @@ g++ FlashCards.cpp -o FlashCards
 for i in {1..100}; do ./FlashCards; done #run drill one hundred
 ```
 
-Command Line Version
+Python Command Line Version
 
 ![Alt text](screenshot-cli.jpg?raw=true "ScreenShot CLI")
 
