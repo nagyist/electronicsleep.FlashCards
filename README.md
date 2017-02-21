@@ -53,7 +53,7 @@ http://mathcard.us
 
 Java Version
 
-![Alt text](screenshot-javajpg?raw=true "ScreenShot Java")
+![Alt text](screenshot-java.jpg?raw=true "ScreenShot Java")
 
 
 Todo/Ideas:
