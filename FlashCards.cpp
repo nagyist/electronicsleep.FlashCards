@@ -28,7 +28,6 @@ bool does_file_exist(string fileName)
   return infile.good();
 }
 
-
 int main(int argc, char** argv)
 {
 
@@ -46,7 +45,7 @@ int main(int argc, char** argv)
   } else {
     cout << "Using Memory File: " + mem_file << endl;
 
-    ifstream ifs(mem_file);
+    ifstream ifs(mem_file.c_str());
 
     int num = 0;
     int card = 0;
