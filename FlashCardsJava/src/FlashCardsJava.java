@@ -1,5 +1,5 @@
 /******************************************************************************
- * Author: Chris Robertson <electronicsleep@gmail.com>
+ * Author: Chris Robertson https://github.com/electronicsleep
  * Date: 12/18/2016
  * Purpose: Open Source Application for learning and memorizing
  * Released under the BSD license

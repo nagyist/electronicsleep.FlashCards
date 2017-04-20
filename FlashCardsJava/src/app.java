@@ -1,5 +1,5 @@
 /******************************************************************************
- * Author: Chris Robertson <electronicsleep@gmail.com>
+ * Author: Chris Robertson https://github.com/electronicsleep
  * Date: 12/18/2016
  * Purpose: Open Source Application for learning and memorizing
  * Released under the BSD license
@@ -31,7 +31,7 @@ public class app extends FlashCardsJava {
     }
 
     public static void main(String[] args) {
-      JFrame frame = new JFrame("app");
+      JFrame frame = new JFrame("Memorization Java FlashCards");
         frame.setContentPane(new app().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
