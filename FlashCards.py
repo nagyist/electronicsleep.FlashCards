@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Author: Chris Robertson <electronicsleep@gmail.com>
+# Author: Chris Robertson https://github.com/electronicsleep
 # Date: 09/10/2014
 # Purpose: Simple FlashCard app for learning math and python
 # Released under the BSD license

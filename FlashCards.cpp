@@ -1,5 +1,5 @@
 /*
-Author: Chris Robertson <electronicsleep@gmail.com>
+Author: Chris Robertson https://github.com/electronicsleep
 Date: 12/11/2016
 Purpose: Simple FlashCard app for learning math and C++
 Released under the BSD license

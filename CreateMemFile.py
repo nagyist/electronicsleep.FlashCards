@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Author: Chris Robertson <electronicsleep@gmail.com>
+# Author: Chris Robertson https://github.com/electronicsleep
 # Date: 06/17/2015
 # Purpose: Generate a memorize.txt file for FlashCards.py
 # Released under the BSD license

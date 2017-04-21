@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Author: Chris Robertson <electronicsleep@gmail.com>
+# Author: Chris Robertson https://github.com/electronicsleep
 # Date: 12/03/2016
 # Purpose: Combine Memorize Files for FlashCards
 # Released under the BSD license
