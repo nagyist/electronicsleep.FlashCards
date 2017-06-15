@@ -43,17 +43,17 @@ for i in {1..100}; do ./FlashCards; done #run drill one hundred
 
 Python Command Line Version
 
-![Alt text](screenshot-cli.jpg?raw=true "ScreenShot CLI")
+![Screenshot CLI](screenshot-cli.jpg?raw=true "ScreenShot CLI")
 
 Web Version
 
 http://mathcard.us
 
-![Alt text](screenshot-web.jpg?raw=true "ScreenShot Web")
+![Screenshot Web](screenshot-web.jpg?raw=true "ScreenShot Web")
 
 Java Version
 
-![Alt text](screenshot-java.jpg?raw=true "ScreenShot Java")
+![Screenshot Java](screenshot-java.jpg?raw=true "ScreenShot Java")
 
 
 Todo/Ideas:
