@@ -130,13 +130,6 @@ def main():
 
         print("What is the answer? ")
 
-        # For python 2 and 3
-        #try:
-        #    input = raw_input
-        #except Exception as e:
-        #    print("Error: " + str(e))
-        #    pass
-
         answer = input(prompt)
         answer = str(answer)
         answer = answer.lower()
