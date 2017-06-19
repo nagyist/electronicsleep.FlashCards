@@ -131,11 +131,11 @@ def main():
         print("What is the answer? ")
 
         answer = input(prompt)
-        answer = str(answer)
-        answer = answer.lower()
+        answer_str = str(answer)
+        answer_str = answer_str.lower()
         answer_card = card_back.lower()
 
-        if answer.strip() == answer_card.strip():
+        if answer_str.strip() == answer_card.strip():
             print("*** CORRECT ***")
             num_correct += 1
             print("Num Correct: " + str(num_correct))
