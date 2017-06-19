@@ -14,7 +14,6 @@
 import time
 import datetime
 import sys
-# import traceback
 
 from random import randint
 from sys import argv
@@ -51,8 +50,8 @@ def main():
         script = argv
         username = "Emtpy"
 
-    print("Script:" + script)
-    print("User: " + username)
+    print("Script:" + str(script))
+    print("User: " + str(username))
 
     time_start = time.time()
 
@@ -131,23 +130,22 @@ def main():
 
         print("What is the answer? ")
 
-        # Override or python 2 and 3
-        try:
-            input = raw_input
-        except Exception as e:
-            print("Error: " + str(e))
-            pass
+        # For python 2 and 3
+        #try:
+        #    input = raw_input
+        #except Exception as e:
+        #    print("Error: " + str(e))
+        #    pass
 
         answer = input(prompt)
-
-        # EVALUATE ANSWER
+        answer = str(answer)
         answer = answer.lower()
         answer_card = card_back.lower()
 
         if answer.strip() == answer_card.strip():
             print("*** CORRECT ***")
             num_correct += 1
-            print "Num Correct: " + str(num_correct)
+            print("Num Correct: " + str(num_correct))
         else:
             print("*** INCORRECT ***")
             print("The correct answer is:")
@@ -155,7 +153,7 @@ def main():
             print(card_back.strip())
             print("|")
             num_incorrect += 1
-            print "Num Incorrect: " + str(num_incorrect)
+            print("Num Incorrect: " + str(num_incorrect))
 
         show_answer_card(card_back)
 
@@ -170,7 +168,7 @@ def main():
         percent_correct = ((float(num_correct) / float(num_cards)) * 100)
         if percent_correct > 75:
             print ("Good Job!")
-        print str(percent_correct) + "% Correct"
+        print(str(percent_correct) + "% Correct")
 
 if __name__ == "__main__":
     main()
