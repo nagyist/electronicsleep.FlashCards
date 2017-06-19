@@ -30,11 +30,11 @@ def show_question_card(card_front):
     print("\---------------------------/")
 
 
-def show_answer_card(cardBack):
+def show_answer_card(card_back):
     print("\---------------------------/")
     print("|                           |")
     print("|                           |")
-    print("| A. %s               " % cardBack.strip())
+    print("| A. %s               " % card_back.strip())
     print("|                           |")
     print("|                           |")
     print("\---------======------------/")
@@ -45,11 +45,14 @@ def main():
     # PRINT NUMBER OF ARGUMENTS
     # print(len(sys.argv))
 
-    if len(sys.argv) == 1:
+    if len(sys.argv) == 2:
+        script, username = argv
+    else:
         script = argv
-        user_name = "Emtpy"
-    elif len(sys.argv) == 2:
-        script, user_name = argv
+        username = "Emtpy"
+
+    print("Script:" + script)
+    print("User: " + username)
 
     time_start = time.time()
 
@@ -60,6 +63,8 @@ def main():
 
     # INITIAL SETUP
     cards = {}
+    mem_file = ""
+    question_line = ""
 
     # HARDCODED EXAMPLE CARDS
     # cards['3 * 2'] = '6'
@@ -73,8 +78,9 @@ def main():
 
     try:
         mem_file = open('memorize.txt', 'r')
-    except:
+    except Exception as e:
         print("Please create a memorize.txt file")
+        print("Error: " + str(e))
         exit()
 
     # PRINT ENTIRE FILE OF QA CARDS
@@ -94,7 +100,7 @@ def main():
     mem_file.close()
 
     # DEFINE SINGLE CARD
-    card = {}
+    # card = {}
 
     # FIND HOW MANY CARDS
 
@@ -110,14 +116,14 @@ def main():
 
     for x in range(num_cards):
 
-        randomNum = randint(1,n)
+        random_num = randint(1, n)
 
         # LOOP AND UNPACK ONE RANDOM CARD
         i = 0
         for k, v in cards.items():
 
             i += 1
-            if i == randomNum:
+            if i == random_num:
                 card_front = k
                 card_back = v
 
@@ -125,9 +131,11 @@ def main():
 
         print("What is the answer? ")
 
+        # Override or python 2 and 3
         try:
             input = raw_input
-        except:
+        except Exception as e:
+            print("Error: " + str(e))
             pass
 
         answer = input(prompt)
