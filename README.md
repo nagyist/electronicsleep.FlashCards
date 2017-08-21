@@ -39,8 +39,10 @@ g++ FlashCards.cpp -o FlashCards
 
 ./FlashCards #run one
 for i in {1..100}; do ./FlashCards; done #run drill one hundred
+```
 
-Memorize file format:
+Memorize test file format: (memorize.txt)
+```
 Q. Questons
 A. Answers
 ```
