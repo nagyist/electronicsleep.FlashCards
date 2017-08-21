@@ -9,7 +9,7 @@
 # Running:
 # python FlashCards.py
 
-# IMPORT STANDARD FUNCTIONS ###
+# IMPORT LIBRARIES
 
 import time
 import datetime
@@ -18,6 +18,7 @@ import sys
 from random import randint
 from sys import argv
 
+# CARD FUNCTIONS
 
 def show_question_card(card_front):
     print("\---------------------------/")
@@ -50,8 +51,8 @@ def main():
         script = argv
         username = "Emtpy"
 
-    print("Script:" + str(script))
-    print("User: " + str(username))
+    print("Script:", script)
+    print("User: ", username)
 
     time_start = time.time()
 
@@ -64,14 +65,6 @@ def main():
     cards = {}
     mem_file = ""
     question_line = ""
-
-    # HARDCODED EXAMPLE CARDS
-    # cards['3 * 2'] = '6'
-    # cards['4 * 11'] = '44'
-    # cards['8 * 2'] = '16'
-    # cards['11 - 100'] = '89'
-    # cards['110 - 100'] = '-10'
-    # cards['5 + 5'] = '10'
 
     # IMPORT MORE CARDS FROM FILE
 
@@ -88,18 +81,15 @@ def main():
     # PARSE FILE FOR QUESTION AND ANSWER FOR CARDS
 
     for line in mem_file:
-        if line.startswith('Q'):
+        if line.startswith('Q.'):
             first, _, question_line = line.partition(" ")
             # print("LOAD: Question: " + line,)
-        elif line.startswith('A'):
+        elif line.startswith('A.'):
             first, _, answer_line = line.partition(" ")
             cards[question_line] = answer_line
             # print("LOAD: Answer: " + line,)
 
     mem_file.close()
-
-    # DEFINE SINGLE CARD
-    # card = {}
 
     # FIND HOW MANY CARDS
 
@@ -138,7 +128,7 @@ def main():
         if answer_str.strip() == answer_card.strip():
             print("*** CORRECT ***")
             num_correct += 1
-            print("Num Correct: " + str(num_correct))
+            print("Num Correct: ", num_correct)
         else:
             print("*** INCORRECT ***")
             print("The correct answer is:")
@@ -146,7 +136,7 @@ def main():
             print(card_back.strip())
             print("|")
             num_incorrect += 1
-            print("Num Incorrect: " + str(num_incorrect))
+            print("Num Incorrect: ", num_incorrect)
 
         show_answer_card(card_back)
 
@@ -161,7 +151,7 @@ def main():
         percent_correct = ((float(num_correct) / float(num_cards)) * 100)
         if percent_correct > 75:
             print ("Good Job!")
-        print(str(percent_correct) + "% Correct")
+        print(percent_correct, "% Correct")
 
 if __name__ == "__main__":
     main()

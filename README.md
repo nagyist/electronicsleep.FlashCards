@@ -39,6 +39,10 @@ g++ FlashCards.cpp -o FlashCards
 
 ./FlashCards #run one
 for i in {1..100}; do ./FlashCards; done #run drill one hundred
+
+Memorize file format:
+Q. Questons
+A. Answers
 ```
 
 Python Command Line Version
