@@ -43,7 +43,7 @@ for i in {1..100}; do ./FlashCards; done #run drill one hundred
 
 Memorize test file format: (memorize.txt)
 ```
-Q. Questons
+Q. Questions
 A. Answers
 ```
 
