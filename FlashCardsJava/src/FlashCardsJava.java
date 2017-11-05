@@ -30,7 +30,7 @@ public class FlashCardsJava {
     private void Card_CLI() {
 
         Card card_cli = new FlashCardsJava.Card();
-        System.out.println("Card: " + card_cli);
+        System.out.println(card_cli);
     }
 
     public class Card {
@@ -41,7 +41,7 @@ public class FlashCardsJava {
 
             String filePath = "memorize.txt";
 
-            System.out.println("Memorize File: " + filePath);
+            //System.out.println("Memorize File: " + filePath);
             File file = new File(filePath);
 
             //System.out.println("File Exists: " + file.exists());
@@ -89,15 +89,15 @@ public class FlashCardsJava {
                 }
 
                 //System.out.println("Random num:" + x);
-                System.out.println(Questions[x]);
+                //System.out.println(Questions[x]);
 
-                try {
-                    Thread.sleep(3000);
-                } catch(InterruptedException ex) {
-                    Thread.currentThread().interrupt();
-                }
+                //try {
+                //    Thread.sleep(3000);
+                //} catch(InterruptedException ex) {
+                //    Thread.currentThread().interrupt();
+                //}
 
-                System.out.println(Answers[x]);
+                //System.out.println(Answers[x]);
 
             } else {
                 System.out.println("Can not find memorize.txt file!");
