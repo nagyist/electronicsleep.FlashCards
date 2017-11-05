@@ -39,7 +39,7 @@ public class FlashCardsJava {
 
         public String toString() {
 
-            String filePath = "../../memorize.txt";
+            String filePath = "memorize.txt";
 
             System.out.println("Memorize File: " + filePath);
             File file = new File(filePath);
@@ -101,6 +101,7 @@ public class FlashCardsJava {
 
             } else {
                 System.out.println("Can not find memorize.txt file!");
+                System.exit(1);
             }
             card = "\n" + Questions[x] + "\n" + Answers[x];
             return card;
