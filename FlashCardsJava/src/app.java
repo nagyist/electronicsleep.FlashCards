@@ -1,4 +1,4 @@
-/******************************************************************************
+/*
  * Author: Chris Robertson https://github.com/electronicsleep
  * Date: 12/18/2016
  * Purpose: Open Source Application for learning and memorizing
@@ -8,7 +8,7 @@
  * Execution:    java FlashCardsJava
  *
  *  % java FlashCardsJava
- ******************************************************************************/
+ */
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -31,9 +31,9 @@ public class app extends FlashCardsJava {
     }
 
     public static void main(String[] args) {
-      JFrame frame = new JFrame("Memorization Java FlashCards");
+      JFrame frame = new JFrame("FlashCardsJava");
         frame.setContentPane(new app().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }
