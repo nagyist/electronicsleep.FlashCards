@@ -14,6 +14,7 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Scanner;
 
 public class FlashCardsJava {
 
@@ -25,19 +26,37 @@ public class FlashCardsJava {
 
         FlashCardsJava card_cli = new FlashCardsJava();
         card_cli.Card_CLI();
+
+
     }
 
     private void Card_CLI() {
 
         Card card_cli = new FlashCardsJava.Card();
-        System.out.println(card_cli);
+        card_cli.getCard();
+
+        System.out.println(card_cli.cardReturn[0]);
+
+        Scanner reader = new Scanner(System.in);
+        System.out.println("What is the Answer: ");
+        String n = reader.nextLine();
+        System.out.println("Your Answer: " + n);
+        String answer = card_cli.cardReturn[1].replace("A. ", "");
+        System.out.println("Correct Answer: " + answer);
+        if (answer.equals(n)) {
+            System.out.println("You are correct");
+        } else {
+            System.out.println("You are incorrect");
+        }
+
     }
 
     public class Card {
 
-        private String card;
+        //private String card;
+        public String[] cardReturn = new String[2];
 
-        public String toString() {
+        public String getCard() {
 
             String filePath = "memorize.txt";
 
@@ -50,6 +69,7 @@ public class FlashCardsJava {
 
             String[] Questions = new String[number_of_cards];
             String[] Answers = new String[number_of_cards];
+
 
             Random rand = new Random();
             int x = rand.nextInt(number_of_cards);
@@ -103,7 +123,11 @@ public class FlashCardsJava {
                 System.out.println("Can not find memorize.txt file!");
                 System.exit(1);
             }
-            card = "\n" + Questions[x] + "\n" + Answers[x];
+            //System.out.println(Questions[x]);
+            cardReturn[0] = Questions[x];
+            cardReturn[1] = Answers[x];
+
+            String card = "\n" + Questions[x] + "\n" + Answers[x];
             return card;
         }
 

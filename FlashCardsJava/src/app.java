@@ -25,7 +25,7 @@ public class app extends FlashCardsJava {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "FlashCards: " + card);
+                JOptionPane.showMessageDialog(null, "FlashCards: " + card.getCard());
             }
         });
     }
