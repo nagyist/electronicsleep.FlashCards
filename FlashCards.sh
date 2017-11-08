@@ -17,10 +17,10 @@ echo "SHUFFLE"
 NUM=0
 for CARD in $DECK; do
 
- if [[ $CARD == *"Q."* ]]; then
-  QCARD=$CARD
- elif [[ $CARD == *"A."* ]]; then
-  ACARD=$CARD
+ if [[ "$CARD" == *"Q."* ]]; then
+  QCARD="$CARD"
+ elif [[ "$CARD" == *"A."* ]]; then
+  ACARD="$CARD"
   NUM=$((NUM+1))
   if [ "$NUM" -eq "$END_CARD" ]; then
    break
@@ -29,6 +29,6 @@ for CARD in $DECK; do
 
 done
 
-echo $QCARD && sleep 2 && echo $ACARD
+echo "$QCARD" && sleep 2 && echo "$ACARD"
 
 exit 0
