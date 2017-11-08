@@ -20,6 +20,7 @@ from sys import argv
 
 # CARD FUNCTIONS
 
+
 def show_question_card(card_front):
     print("\---------------------------/")
     print("|///////////////////////////|")
@@ -67,7 +68,6 @@ def main():
     question_line = ""
 
     # IMPORT MORE CARDS FROM FILE
-
     try:
         mem_file = open('memorize.txt', 'r')
     except Exception as e:
@@ -152,6 +152,7 @@ def main():
         if percent_correct > 75:
             print ("Good Job!")
         print(percent_correct, "% Correct")
+
 
 if __name__ == "__main__":
     main()

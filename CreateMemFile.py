@@ -8,10 +8,6 @@
 # Running:
 # python CreateMemFile.py
 
-# IMPORT STANDARD FUNCTIONS
-
-import sys
-
 # APPEND TO MEMORIZE FILE
 
 f = open('memorize.txt', 'a')
@@ -43,6 +39,3 @@ for x in range(11, 20):
         f.write("Q. " + xx + " * " + yy + "\n")
         f.write("A. " + times2 + "\n")
         f.write("\n")
- 
-# END OF SCRIPT
-sys.exit(0)
