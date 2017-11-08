@@ -18,25 +18,22 @@ import java.util.Scanner;
 
 public class FlashCardsJava {
 
-
     public static void main(String[] args) throws IOException {
-
         // For CLI version
         System.out.println("FlashCardsJava");
 
         FlashCardsJava card_cli = new FlashCardsJava();
         card_cli.Card_CLI();
-
-
     }
 
     private void Card_CLI() {
-
         Card card_cli = new FlashCardsJava.Card();
         card_cli.getCard();
 
+        //Print Question
         System.out.println(card_cli.cardReturn[0]);
 
+        //Get Answer
         Scanner reader = new Scanner(System.in);
         System.out.println("What is the Answer: ");
         String n = reader.nextLine();
@@ -48,16 +45,13 @@ public class FlashCardsJava {
         } else {
             System.out.println("You are incorrect");
         }
-
     }
 
     public class Card {
-
         //private String card;
         public String[] cardReturn = new String[2];
 
         public String getCard() {
-
             String filePath = "memorize.txt";
 
             //System.out.println("Memorize File: " + filePath);
@@ -69,7 +63,6 @@ public class FlashCardsJava {
 
             String[] Questions = new String[number_of_cards];
             String[] Answers = new String[number_of_cards];
-
 
             Random rand = new Random();
             int x = rand.nextInt(number_of_cards);
@@ -108,31 +101,15 @@ public class FlashCardsJava {
                     e.printStackTrace();
                 }
 
-                //System.out.println("Random num:" + x);
-                //System.out.println(Questions[x]);
-
-                //try {
-                //    Thread.sleep(3000);
-                //} catch(InterruptedException ex) {
-                //    Thread.currentThread().interrupt();
-                //}
-
-                //System.out.println(Answers[x]);
-
             } else {
                 System.out.println("Can not find memorize.txt file!");
                 System.exit(1);
             }
-            //System.out.println(Questions[x]);
             cardReturn[0] = Questions[x];
             cardReturn[1] = Answers[x];
 
             String card = "\n" + Questions[x] + "\n" + Answers[x];
             return card;
         }
-
     }
-
-
-
 }
