@@ -15,6 +15,7 @@ import java.nio.charset.Charset;
 import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class FlashCardsJava {
 
@@ -61,8 +62,8 @@ public class FlashCardsJava {
 
             int number_of_cards = 200;
 
-            String[] Questions = new String[number_of_cards];
-            String[] Answers = new String[number_of_cards];
+            ArrayList<String> Questions = new ArrayList<String>();
+            ArrayList<String> Answers = new ArrayList<String>();
 
             Random rand = new Random();
             int x = rand.nextInt(number_of_cards);
@@ -87,10 +88,10 @@ public class FlashCardsJava {
 
                         if (line.startsWith("Q.")) {
                             //System.out.println("Found Question: " + line);
-                            Questions[n] = line;
+                            Questions.add(line);
                         } else if (line.startsWith("A.")) {
                             //System.out.println("Found Answer: " + line);
-                            Answers[n] = line;
+                            Answers.add(line);
                             n++;
                             //System.out.println("n: " + n);
                         }
@@ -105,10 +106,10 @@ public class FlashCardsJava {
                 System.out.println("Can not find memorize.txt file!");
                 System.exit(1);
             }
-            cardReturn[0] = Questions[x];
-            cardReturn[1] = Answers[x];
+            cardReturn[0] = Questions.get(x);
+            cardReturn[1] = Answers.get(x);
 
-            String card = "\n" + Questions[x] + "\n" + Answers[x];
+            String card = "\n" + Questions.get(x) + "\n" + Answers.get(x);
             return card;
         }
     }
