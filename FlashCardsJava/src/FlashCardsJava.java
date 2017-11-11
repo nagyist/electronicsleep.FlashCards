@@ -60,18 +60,16 @@ public class FlashCardsJava {
 
             //System.out.println("File Exists: " + file.exists());
 
-            int number_of_cards = 200;
+            // For fixed number of cards
+            // int number_of_cards = 2000;
 
-            ArrayList<String> Questions = new ArrayList<String>();
-            ArrayList<String> Answers = new ArrayList<String>();
+            ArrayList<String> Questions = new ArrayList<>();
+            ArrayList<String> Answers = new ArrayList<>();
 
-            Random rand = new Random();
-            int x = rand.nextInt(number_of_cards);
-
+            int n = 0;
             if(file.exists()) {
 
                 String line;
-                int n = 0;
 
                 try {
                     InputStream fis = new FileInputStream(filePath);
@@ -81,10 +79,12 @@ public class FlashCardsJava {
                     while ((line = br.readLine()) != null) {
                         //System.out.println("line: " + line);
 
+                        /* For fixed number of cards
                         if (n == number_of_cards) {
                             //System.out.println("Break: End of Array");
                             break;
                         }
+                        */
 
                         if (line.startsWith("Q.")) {
                             //System.out.println("Found Question: " + line);
@@ -106,11 +106,14 @@ public class FlashCardsJava {
                 System.out.println("Can not find memorize.txt file!");
                 System.exit(1);
             }
+
+            Random rand = new Random();
+            int x = rand.nextInt(n);
+
             cardReturn[0] = Questions.get(x);
             cardReturn[1] = Answers.get(x);
 
-            String card = "\n" + Questions.get(x) + "\n" + Answers.get(x);
-            return card;
+            return "\n" + Questions.get(x) + "\n" + Answers.get(x);
         }
     }
 }
