@@ -55,7 +55,7 @@ public class FlashCardsJava {
                 System.out.println("You are incorrect:");
             }
             percentCorrect = (numCorrect * 100 / num);
-            System.out.println("Correct: " + numCorrect + " Incorrect: " + numIncorrect + " Percent: " + percentCorrect);
+            System.out.println("Correct: " + numCorrect + " Incorrect: " + numIncorrect + " Percent: " + percentCorrect + "%");
             System.out.println("-----");
 
         }
