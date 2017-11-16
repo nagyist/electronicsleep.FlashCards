@@ -28,23 +28,36 @@ public class FlashCardsJava {
     }
 
     private void Card_CLI() {
+
         Card card_cli = new FlashCardsJava.Card();
-        card_cli.getCard();
+        int numCorrect = 0;
+        int numIncorrect = 0;
+        float percentCorrect;
+        for (int num = 1; num < 100; num++){
+            card_cli.getCard();
 
-        //Print Question
-        System.out.println(card_cli.cardReturn[0]);
+            //Print Question
+            System.out.println(card_cli.cardReturn[0]);
 
-        //Get Answer
-        Scanner reader = new Scanner(System.in);
-        System.out.println("What is the Answer: ");
-        String n = reader.nextLine();
-        System.out.println("Your Answer: " + n);
-        String answer = card_cli.cardReturn[1].replace("A. ", "");
-        System.out.println("Correct Answer: " + answer);
-        if (answer.equals(n)) {
-            System.out.println("You are correct");
-        } else {
-            System.out.println("You are incorrect");
+            //Get Answer
+            Scanner reader = new Scanner(System.in);
+            System.out.println("What is the Answer: ");
+            String n = reader.nextLine();
+            System.out.println("Your Answer: " + n);
+            String answer = card_cli.cardReturn[1].replace("A. ", "");
+            System.out.println("Correct Answer: " + answer);
+            if (answer.equals(n)) {
+                numCorrect++;
+                System.out.println("You are correct");
+
+            } else {
+                numIncorrect++;
+                System.out.println("You are incorrect:");
+            }
+            percentCorrect = (numCorrect * 100 / num);
+            System.out.println("Correct: " + numCorrect + " Incorrect: " + numIncorrect + " Percent: " + percentCorrect);
+            System.out.println("-----");
+
         }
     }
 
