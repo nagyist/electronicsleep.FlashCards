@@ -11,13 +11,15 @@
 ```
 cd src
 javac FlashCardsJava.java
+
+cd out/production/FlashCardsJava
+
 #CLI launch
 java FlashCardsJava
+
 #GUI launch
 java FlashCardsJavaApp
 ```
-## OR Compile and Run app.java or FlashCardsJava.java from IntelliJ
-
 ## Todo:
 - Better interface and graphics for the cards
 - Show the answer first then ask the user to enter the answer
