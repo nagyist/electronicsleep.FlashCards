@@ -14,11 +14,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class app extends FlashCardsJava {
+public class FlashCardsJavaApp extends FlashCardsJava {
     private JPanel panel1;
     private JButton button1;
 
-    public app() {
+    public FlashCardsJavaApp() {
         button1.addActionListener(new ActionListener() {
 
             Card card = new FlashCardsJava.Card();
@@ -32,7 +32,7 @@ public class app extends FlashCardsJava {
 
     public static void main(String[] args) {
       JFrame frame = new JFrame("FlashCardsJava");
-        frame.setContentPane(new app().panel1);
+        frame.setContentPane(new FlashCardsJavaApp().panel1);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);

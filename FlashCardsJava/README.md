@@ -1,7 +1,7 @@
 # FlashCardsJava
 - MacOS Java 8
 - Using IntelliJ and Javac
-- Java Swing version and CLI version
+- Swing version and CLI version
 
 ## Files:
 - src/FlashCardsJava.java - standalone CLI version
@@ -11,7 +11,10 @@
 ```
 cd src
 javac FlashCardsJava.java
+#CLI launch
 java FlashCardsJava
+#GUI launch
+java FlashCardsJavaApp
 ```
 ## OR Compile and Run app.java or FlashCardsJava.java from IntelliJ
 
