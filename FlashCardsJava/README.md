@@ -1,7 +1,7 @@
 # FlashCardsJava
-- Java Swing version and CLI version
+- MacOS Java 8
 - Using IntelliJ and Javac
-- Java 8
+- Java Swing version and CLI version
 
 ## Files:
 - src/FlashCardsJava.java - standalone CLI version
