@@ -1,7 +1,7 @@
 FlashCards
 ==========
 
-Open Source Flash Card Application for learning Python and Memorizing anything
+Open Source Flash Card Application for learning and Memorizing anything
 
 Author: Chris Robertson
 
@@ -15,10 +15,12 @@ possible so that anyone can extend the functionality without much complexity.
 Update the information you want to memorize into the memorize.txt file and run. This is the open source comand line version and there is a web version. 
 
 Works with Python2.7 and 3.5 MacOS and Debian
-Java version tested and works with IntelliJ
-C++ version tested and works MacOS
 
-Python Usage:
+Java version tested and works with IntelliJ
+
+C++ version tested and works MacOS / Linux
+
+# Python Usage:
 ```
 Open Terminal
 git clone https://github.com/electronicsleep/FlashCards.git
@@ -26,13 +28,18 @@ cd FlashCards
 python FlashCards.py
 ```
 
+# Java Usage:
+See FlashCardsJava/README.md
+
+
 C++ Usage:
 ```
 Open Terminal
 git clone https://github.com/electronicsleep/FlashCards.git
 cd FlashCards
 
-#MacOS
+
+# MacOS
 llvm-g++ FlashCards.cpp -o ./FlashCards
 #Linux
 g++ FlashCards.cpp -o FlashCards
