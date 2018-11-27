@@ -1,15 +1,11 @@
 #!/usr/bin/python
 
 # Author: Chris Robertson https://github.com/electronicsleep
-# Date: 09/10/2014
 # Purpose: Simple FlashCard app for learning math and python
 # Released under the BSD license
-# Works with python 2 and 3
 
 # Running:
 # python FlashCards.py
-
-# IMPORT LIBRARIES
 
 import time
 import datetime
@@ -17,8 +13,6 @@ import sys
 
 from random import randint
 from sys import argv
-
-# CARD FUNCTIONS
 
 
 def show_question_card(card_front):
@@ -43,9 +37,6 @@ def show_answer_card(card_back):
 
 def main():
 
-    # PRINT NUMBER OF ARGUMENTS
-    # print(len(sys.argv))
-
     if len(sys.argv) == 2:
         script, username = argv
     else:
@@ -60,14 +51,11 @@ def main():
     prompt = '> '
     card_front = ""
 
-    # SETUP CARD DICTIONARY
-
-    # INITIAL SETUP
     cards = {}
     mem_file = ""
     question_line = ""
 
-    # IMPORT MORE CARDS FROM FILE
+    # Import cards from file
     try:
         mem_file = open('memorize.txt', 'r')
     except Exception as e:
@@ -75,23 +63,16 @@ def main():
         print("Error: " + str(e))
         exit()
 
-    # PRINT ENTIRE FILE OF QA CARDS
-    # print mem_file.read()
-
-    # PARSE FILE FOR QUESTION AND ANSWER FOR CARDS
-
     for line in mem_file:
         if line.startswith('Q.'):
             first, _, question_line = line.partition(" ")
-            # print("LOAD: Question: " + line,)
+            print("LOAD: Question: " + line)
         elif line.startswith('A.'):
             first, _, answer_line = line.partition(" ")
             cards[question_line] = answer_line
-            # print("LOAD: Answer: " + line,)
+            print("LOAD: Answer: " + line)
 
     mem_file.close()
-
-    # FIND HOW MANY CARDS
 
     n = len(cards.keys())
     print("\=====-----======--------=====/")
@@ -107,7 +88,7 @@ def main():
 
         random_num = randint(1, n)
 
-        # LOOP AND UNPACK ONE RANDOM CARD
+        # Loop and deal one random card
         i = 0
         for k, v in cards.items():
 
@@ -120,8 +101,7 @@ def main():
 
         print("What is the answer? ")
 
-        answer = input(prompt)
-        answer_str = str(answer)
+        answer_str = raw_input(prompt)
         answer_str = answer_str.lower()
         answer_card = card_back.lower()
 
@@ -140,10 +120,8 @@ def main():
 
         show_answer_card(card_back)
 
-        # GET END TIME
         time_end = time.time()
 
-        # PRINT TIME IT TAKES TO ANSWER
         diff = time_end - time_start
         diff_str = str(diff)
         print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
