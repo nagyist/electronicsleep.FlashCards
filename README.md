@@ -32,7 +32,7 @@ python FlashCards.py
 See FlashCardsJava/README.md
 
 
-C++ Usage:
+# C++ Usage:
 ```
 Open Terminal
 git clone https://github.com/electronicsleep/FlashCards.git
