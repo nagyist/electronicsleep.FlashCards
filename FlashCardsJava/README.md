@@ -1,5 +1,5 @@
 # FlashCardsJava
-- MacOS Java 8
+- Tested on Linux/MacOS Java 8
 - Using IntelliJ and Javac
 - Swing version and CLI version
 
