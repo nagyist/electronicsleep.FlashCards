@@ -24,9 +24,9 @@ from sys import argv
 def show_question_card(card_front):
     print("\---------------------------/")
     print("|///////////////////////////|")
-    print("|///////////////////////////|")
+    print("|                           |")
     print("| Q. %s                " % card_front.strip())
-    print("|///////////////////////////|")
+    print("|                           |")
     print("|///////////////////////////|")
     print("\---------------------------/")
 
