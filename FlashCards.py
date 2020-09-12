@@ -101,7 +101,7 @@ def main():
 
         print("What is the answer? ")
 
-        answer_str = raw_input(prompt)
+        answer_str = input(prompt)
         answer_str = answer_str.lower()
         answer_card = card_back.lower()
 

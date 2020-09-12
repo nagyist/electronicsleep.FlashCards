@@ -25,7 +25,7 @@ C++ version tested and works MacOS / Linux
 Open Terminal
 git clone https://github.com/electronicsleep/FlashCards.git
 cd FlashCards
-python FlashCards.py
+python3 FlashCards.py
 ```
 
 # Java Usage:
