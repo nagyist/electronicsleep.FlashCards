@@ -67,11 +67,11 @@ def main():
     for line in mem_file:
         if line.startswith('Q.'):
             first, _, question_line = line.partition(" ")
-            print("LOAD: Question: " + line)
+            # print("LoadCard: Question: " + line)
         elif line.startswith('A.'):
             first, _, answer_line = line.partition(" ")
             cards[question_line] = answer_line
-            print("LOAD: Answer: " + line)
+            # print("LoadCard: Answer: " + line)
 
     mem_file.close()
 
