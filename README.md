@@ -58,12 +58,6 @@ Python Command Line Version
 
 ![Screenshot CLI](screenshot-cli.jpg?raw=true "ScreenShot CLI")
 
-Web Version
-
-http://mathcard.us
-
-![Screenshot Web](screenshot-web.jpg?raw=true "ScreenShot Web")
-
 Java Version
 
 ![Screenshot Java](screenshot-java.jpg?raw=true "ScreenShot Java")
