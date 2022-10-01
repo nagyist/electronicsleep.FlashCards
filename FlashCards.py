@@ -16,23 +16,23 @@ from sys import argv
 
 
 def show_question_card(card_front):
-    print("\---------------------------/")
+    print("----------------------------/")
     print("|///////////////////////////|")
     print("|                           |")
     print("| Q. %s                " % card_front.strip())
     print("|                           |")
     print("|///////////////////////////|")
-    print("\---------------------------/")
+    print("----------------------------/")
 
 
 def show_answer_card(card_back):
-    print("\---------------------------/")
+    print("----------------------------/")
     print("|                           |")
     print("|                           |")
     print("| A. %s               " % card_back.strip())
     print("|                           |")
     print("|                           |")
-    print("\---------======------------/")
+    print("----------======------------/")
 
 
 def main():
@@ -51,6 +51,7 @@ def main():
     prompt = '> '
     card_front = ""
 
+    # SETUP CARD DICTIONARY
     cards = {}
     mem_file = ""
     question_line = ""
@@ -61,7 +62,7 @@ def main():
     except Exception as e:
         print("Please create a memorize.txt file")
         print("Error: " + str(e))
-        exit()
+        exit(1)
 
     for line in mem_file:
         if line.startswith('Q.'):
@@ -75,9 +76,9 @@ def main():
     mem_file.close()
 
     n = len(cards.keys())
-    print("\=====-----======--------=====/")
-    print("NUMBER OF CARDS %s" % n)
-    print("DATE: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
+    print("======-----======------======")
+    print("Number of Cards %s" % n)
+    print("Date: " + datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S"))
 
     num_cards = 4
 
@@ -128,7 +129,7 @@ def main():
         print("You took " + diff_str + " seconds to answer")
         percent_correct = ((float(num_correct) / float(num_cards)) * 100)
         if percent_correct > 75:
-            print ("Good Job!")
+            print("Good Job!")
         print(percent_correct, "% Correct")
 
 
