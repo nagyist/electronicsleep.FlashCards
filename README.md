@@ -23,29 +23,9 @@ C++ version tested and works MacOS / Linux
 # Python Usage:
 ```
 Open Terminal
-git clone https://github.com/electronicsleep/FlashCards.git
-cd FlashCards
-python3 FlashCards.py
-```
-
-# Java Usage:
-See FlashCardsJava/README.md
-
-
-# C++ Usage:
-```
-Open Terminal
-git clone https://github.com/electronicsleep/FlashCards.git
-cd FlashCards
-
-
-# MacOS
-llvm-g++ FlashCards.cpp -o ./FlashCards
-#Linux
-g++ FlashCards.cpp -o FlashCards
-
-./FlashCards #run one
-for i in {1..100}; do ./FlashCards; done #run drill one hundred
+git clone https://github.com/electronicsleep/flash-cards.git
+cd flash-cards
+python3 flash-cards.py
 ```
 
 Memorize test file format: (memorize.txt)
@@ -57,10 +37,6 @@ A. Answers
 Python Command Line Version
 
 ![Screenshot CLI](screenshot-cli.jpg?raw=true "ScreenShot CLI")
-
-Java Version
-
-![Screenshot Java](screenshot-java.jpg?raw=true "ScreenShot Java")
 
 
 Todo/Ideas:
